@@ -1,47 +1,42 @@
-// src/Pages/HomePage.jsx
-// import { Helmet } from "react-helmet";
+// src/Pages/Home/Home.jsx
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   return (
     <>
-      {/* SEO Meta Tags */}
-      {/* <Helmet>
+      <Helmet>
         <title>სარეცხი მანქანის შეკეთება თბილისში | DrWash</title>
         <meta
           name="description"
-          content="პროფესიონალური სარეცხი მანქანის შეკეთება თბილისში. სწრაფი მომსახურება, ხელმისაწვდომი ფასები და გამოცდილ ხელოსნები. დარეკეთ ახლავე!"
+          content="პროფესიონალური სარეცხი მანქანის შეკეთება თბილისში. სწრაფი მომსახურება, ხელმისაწვდომი ფასები და გარანტია."
         />
-        <meta
-          name="keywords"
-          content="სარეცხი მანქანის შეკეთება, სარეცხი მანქანის ხელოსანი, სარეცხი მანქანის პრობლემები, სარეცხი მანქანის შეკეთება თბილისში"
-        />
-        <link rel="canonical" href="https://drwash.ge/" />
-      </Helmet> */}
+      </Helmet>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center py-16 px-4">
-        <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
-          სარეცხი მანქანის შეკეთება თბილისში
-        </h1>
-        <p className="mt-4 text-lg sm:text-xl max-w-2xl mx-auto">
-          სწრაფი, სანდო და ხელმისაწვდომი მომსახურება თქვენი სარეცხი
-          მანქანისთვის.
-        </p>
-        <a
-          href="tel:555123456"
-          className="mt-6 inline-block bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow hover:bg-yellow-300"
-        >
-          📞 დაგვირეკეთ ახლავე – 555 123 456
-        </a>
+      {/* Hero */}
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center py-20 px-6">
+        <div className="max-w-2xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
+            სარეცხი მანქანის შეკეთება თბილისში
+          </h1>
+          <p className="mt-4 text-lg sm:text-xl text-blue-100">
+            სწრაფი, სანდო და პროფესიონალური სერვისი თქვენი სარეცხი მანქანისთვის.
+          </p>
+          <a
+            href="tel:555123456"
+            className="mt-6 inline-block bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-300 transition"
+          >
+            📞 დაგვირეკეთ ახლავე – 555 123 456
+          </a>
+        </div>
       </section>
 
-      {/* Services Section */}
-      <section className="max-w-screen-xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+      {/* Services */}
+      <section className="max-w-screen-xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
           ჩვენი სერვისები
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="p-6 border rounded-lg shadow hover:shadow-md bg-white">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition">
             <h3 className="text-xl font-semibold text-blue-700">
               გაჟონვის შეკეთება
             </h3>
@@ -49,49 +44,34 @@ export default function Home() {
               წყლის გაჟონვის სწრაფი აღმოჩენა და შეკეთება.
             </p>
           </div>
-          <div className="p-6 border rounded-lg shadow hover:shadow-md bg-white">
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition">
             <h3 className="text-xl font-semibold text-blue-700">
               ძრავის პრობლემა
             </h3>
             <p className="mt-2 text-gray-600">
-              სარეცხი მანქანის ძრავის დიაგნოსტიკა და შეკეთება.
+              ძრავის დიაგნოსტიკა და სრულფასოვანი შეკეთება.
             </p>
           </div>
-          <div className="p-6 border rounded-lg shadow hover:shadow-md bg-white">
-            <h3 className="text-xl font-semibold text-blue-700">
-              მონტაჟი და დამონტაჟება
-            </h3>
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition">
+            <h3 className="text-xl font-semibold text-blue-700">მონტაჟი</h3>
             <p className="mt-2 text-gray-600">
-              სარეცხი მანქანის მონტაჟი/დამონტაჟება პროფესიონალურად.
+              პროფესიონალური მონტაჟი და კონფიგურაცია.
             </p>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="bg-gray-50 py-12 px-4">
-        <div className="max-w-screen-lg mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+      {/* About */}
+      <section className="bg-gray-50 py-16 text-center px-6">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">
             რატომ DrWash?
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            გვაქვს მრავალწლიანი გამოცდილება სარეცხი მანქანის შეკეთებაში.
-            ვიყენებთ მხოლოდ ორიგინალ ნაწილებს და გთავაზობთ გარანტიას ყველა
-            სერვისზე.
+          <p className="text-gray-600">
+            მრავალწლიანი გამოცდილება, ორიგინალი ნაწილები და სერვისზე გარანტია —
+            ჩვენზე შეგიძლიათ თავდაჯერებით იფიქროთ, როგორც სანდო პარტნიორზე.
           </p>
         </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="bg-blue-700 text-white py-12 text-center">
-        <h2 className="text-2xl font-bold">დაგვიკავშირდით დღესვე!</h2>
-        <p className="mt-2">ტელეფონი: 555 123 456 • Email: info@drwash.ge</p>
-        <a
-          href="/contact"
-          className="mt-4 inline-block bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow hover:bg-yellow-300"
-        >
-          კონტაქტი
-        </a>
       </section>
     </>
   );

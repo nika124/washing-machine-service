@@ -1,4 +1,4 @@
-// src/Layout/Header.jsx
+// src/Layout/Header/Header.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,64 +6,48 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-md">
       <div className="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-xl font-bold text-gray-800">
-          DrWash
+        <Link
+          to="/"
+          className="text-2xl font-extrabold tracking-tight text-gray-900"
+        >
+          <span className="text-blue-600">Dr</span>Wash
         </Link>
 
         {/* Mobile menu button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
+          className="md:hidden text-2xl text-gray-700 focus:outline-none"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            {open ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
+          {open ? "✖" : "☰"}
         </button>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex gap-6">
-          <Link to="/" className="hover:text-blue-600">
-            მთავარი
-          </Link>
-          <Link to="/services" className="hover:text-blue-600">
-            სერვისები
-          </Link>
-          <Link to="/about" className="hover:text-blue-600">
-            ჩვენს შესახებ
-          </Link>
-          <Link to="/contact" className="hover:text-blue-600">
-            კონტაქტი
-          </Link>
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex gap-8 text-gray-700 font-medium">
+          {["მთავარი", "სერვისები", "ჩვენს შესახებ", "კონტაქტი"].map(
+            (item, idx) => {
+              const href = ["/", "/services", "/about", "/contact"][idx];
+              return (
+                <Link
+                  key={item}
+                  to={href}
+                  className="relative hover:text-blue-600 transition"
+                >
+                  {item}
+                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                </Link>
+              );
+            }
+          )}
         </nav>
       </div>
 
-      {/* Mobile nav */}
+      {/* Mobile Nav */}
       {open && (
         <nav className="md:hidden bg-gray-50 border-t">
-          <div className="px-4 py-2 flex flex-col gap-3">
+          <div className="flex flex-col px-4 py-3 space-y-3 text-gray-700 font-medium">
             <Link to="/" onClick={() => setOpen(false)}>
               მთავარი
             </Link>
