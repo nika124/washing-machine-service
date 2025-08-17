@@ -1,5 +1,9 @@
 // src/Pages/Home/Home.jsx
 import { Helmet } from "react-helmet-async";
+import PhoneIcon from "@mui/icons-material/Phone";
+import BuildIcon from "@mui/icons-material/Build";
+import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
+import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
 
 export default function Home() {
   return (
@@ -23,9 +27,10 @@ export default function Home() {
           </p>
           <a
             href="tel:555123456"
-            className="mt-6 inline-block bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-300 transition"
+            className="mt-6 inline-flex items-center gap-2 bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-300 transition"
           >
-            📞 დაგვირეკეთ ახლავე – 555 123 456
+            <PhoneIcon />
+            დაგვირეკეთ ახლავე – 555 123 456
           </a>
         </div>
       </section>
@@ -36,24 +41,40 @@ export default function Home() {
           ჩვენი სერვისები
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition">
-            <h3 className="text-xl font-semibold text-blue-700">
+          {/* Leakage */}
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition flex flex-col items-center text-center">
+            <BuildIcon className="text-blue-600" style={{ fontSize: 48 }} />
+            <h3 className="mt-4 text-xl font-semibold text-blue-700">
               გაჟონვის შეკეთება
             </h3>
             <p className="mt-2 text-gray-600">
               წყლის გაჟონვის სწრაფი აღმოჩენა და შეკეთება.
             </p>
           </div>
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition">
-            <h3 className="text-xl font-semibold text-blue-700">
+
+          {/* Engine */}
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition flex flex-col items-center text-center">
+            <ElectricalServicesIcon
+              className="text-blue-600"
+              style={{ fontSize: 48 }}
+            />
+            <h3 className="mt-4 text-xl font-semibold text-blue-700">
               ძრავის პრობლემა
             </h3>
             <p className="mt-2 text-gray-600">
               ძრავის დიაგნოსტიკა და სრულფასოვანი შეკეთება.
             </p>
           </div>
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition">
-            <h3 className="text-xl font-semibold text-blue-700">მონტაჟი</h3>
+
+          {/* Installation */}
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition flex flex-col items-center text-center">
+            <HomeRepairServiceIcon
+              className="text-blue-600"
+              style={{ fontSize: 48 }}
+            />
+            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+              მონტაჟი
+            </h3>
             <p className="mt-2 text-gray-600">
               პროფესიონალური მონტაჟი და კონფიგურაცია.
             </p>

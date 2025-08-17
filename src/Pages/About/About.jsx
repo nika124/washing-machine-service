@@ -1,5 +1,8 @@
 // src/Pages/About/About.jsx
 import { Helmet } from "react-helmet-async";
+import StarIcon from "@mui/icons-material/Star";
+import BuildIcon from "@mui/icons-material/Build";
+import VerifiedIcon from "@mui/icons-material/Verified";
 
 export default function About() {
   return (
@@ -37,22 +40,29 @@ export default function About() {
       {/* Values */}
       <section className="bg-gray-50 py-16 px-6">
         <div className="max-w-screen-lg mx-auto grid gap-8 md:grid-cols-3 text-center">
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-blue-700">
-              ⭐ გამოცდილება
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+            <StarIcon className="text-blue-600" style={{ fontSize: 48 }} />
+            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+              გამოცდილება
             </h3>
             <p className="mt-2 text-gray-600">
               10+ წელზე მეტი პრაქტიკა ტექნიკის სერვისში.
             </p>
           </div>
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-blue-700">🔧 ხარისხი</h3>
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+            <BuildIcon className="text-blue-600" style={{ fontSize: 48 }} />
+            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+              ხარისხი
+            </h3>
             <p className="mt-2 text-gray-600">
               მხოლოდ ორიგინალი ნაწილები და სანდო ტექნოლოგიები.
             </p>
           </div>
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-blue-700">✅ გარანტია</h3>
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+            <VerifiedIcon className="text-blue-600" style={{ fontSize: 48 }} />
+            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+              გარანტია
+            </h3>
             <p className="mt-2 text-gray-600">
               ყველა სერვისზე გაწერილი გარანტია და სწრაფი მომსახურება.
             </p>
