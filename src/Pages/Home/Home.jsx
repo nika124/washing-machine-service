@@ -12,25 +12,38 @@ export default function Home() {
         <title>სარეცხი მანქანის შეკეთება თბილისში | DrWash</title>
         <meta
           name="description"
-          content="პროფესიონალური სარეცხი მანქანის შეკეთება თბილისში. სწრაფი მომსახურება, ხელმისაწვდომი ფასები და გარანტია."
+          content="პროფესიონალური სარეცხი მანქანის შეკეთება თბილისში. სწრაფი მომსახურება, ხელმისაწვდომი ფასები და გარანტია."                    
         />
+        <meta 
+         name="keywords"
+         content="სარეცხის ხელოსანი,სარეცხი მანქანის ჩაბარეაბ, სარეცხი მანქანის ხელოსანი, სარეცხი მანქანების ხელოსანი, სარეცხი მანქანის ხელოსანი გამოძახებით, სარეცხის მანქანის, გამოძახების სერვისი, ადგილზე მისვლა,samsung,bosh,beko,Indesit,Gorenje">          
+         </meta>
+         <meta property="og:title" content="სარეცხი მანქანის შეკეთება ადგილზე"></meta>
+         <meta property="og:description" content="სწრაფი და ხარისხიანი მოსახურეობა. Book now."></meta>
+         <meta property="og:type" content="website"></meta>
+         <meta name="twitter:title" content="Washing Machine Repair in Tbilisi"></meta>
+         <meta name="twitter:description" content="Affordable and fast appliance repair service."></meta>
+         <meta name="geo.region" content="GE-TB"></meta>
+         <meta name="geo.placename" content="Tbilisi"></meta> 
+         <link rel="canonical" href="https://drwash.ge/about" />
       </Helmet>
 
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center py-20 px-6">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
-            სარეცხი მანქანის შეკეთება თბილისში
+            სარეცხი მანქანის შეკეთება ადგილზე, თბილისის მასშტაბით             
           </h1>
-          <p className="mt-4 text-lg sm:text-xl text-blue-100">
-            სწრაფი, სანდო და პროფესიონალური სერვისი თქვენი სარეცხი მანქანისთვის.
+          <p className="mt-4 text-lg sm:text-xl text-blue-100">            
+            სწრაფი, სანდო და პროფესიონალური სერვისი თქვენი სარეცხი მანქანისთვის.            
+            სარეცხი მანქანის ხელოსანი გამოძახება 20 ლარი
           </p>
           <a
             href="tel:555123456"
             className="mt-6 inline-flex items-center gap-2 bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-300 transition"
           >
             <PhoneIcon />
-            დაგვირეკეთ ახლავე – 555 123 456
+            დაგვირეკეთ  – 555 123 456
           </a>
         </div>
       </section>
@@ -45,10 +58,11 @@ export default function Home() {
           <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition flex flex-col items-center text-center">
             <BuildIcon className="text-blue-600" style={{ fontSize: 48 }} />
             <h3 className="mt-4 text-xl font-semibold text-blue-700">
-              გაჟონვის შეკეთება
+              დიაგნოსტიკა
             </h3>
             <p className="mt-2 text-gray-600">
-              წყლის გაჟონვის სწრაფი აღმოჩენა და შეკეთება.
+              პროფესინალი ხელოსანი ჩაატარებს დანადგარის სრულ დიაგნოსტიკას,
+              გაუმართაობის მიზეზის დადგენა ხდება მაქსიმალურად მცირე დროში.
             </p>
           </div>
 
@@ -59,10 +73,11 @@ export default function Home() {
               style={{ fontSize: 48 }}
             />
             <h3 className="mt-4 text-xl font-semibold text-blue-700">
-              ძრავის პრობლემა
+              შეკეთება
             </h3>
             <p className="mt-2 text-gray-600">
-              ძრავის დიაგნოსტიკა და სრულფასოვანი შეკეთება.
+              სარეცხი მანქანის შეკეთება ხდება ადგილზე მოსვლის. 
+              შესაძლებელია საჭირო გახდეს სარეცხი მანქანის/ნაწილის სერვისცენტრში გადატანა   
             </p>
           </div>
 
@@ -73,10 +88,15 @@ export default function Home() {
               style={{ fontSize: 48 }}
             />
             <h3 className="mt-4 text-xl font-semibold text-blue-700">
-              მონტაჟი
+              დაზიანების  ტიპები
             </h3>
-            <p className="mt-2 text-gray-600">
-              პროფესიონალური მონტაჟი და კონფიგურაცია.
+            <p className="mt-2 text-gray-600">                
+                ელექტრონული დაფის(პლატის) დაზიანება;
+                ბარაბნის შეკეთება;
+                ღვედის შეცვლა;
+                ძრავის შეკეთება/შეცვლა;
+                საკისრების შეცვლა;                                
+                სხვა დეტალების შეცვლა არდგენა;                
             </p>
           </div>
         </div>
@@ -89,8 +109,9 @@ export default function Home() {
             რატომ DrWash?
           </h2>
           <p className="text-gray-600">
-            მრავალწლიანი გამოცდილება, ორიგინალი ნაწილები და სერვისზე გარანტია —
-            ჩვენზე შეგიძლიათ თავდაჯერებით იფიქროთ, როგორც სანდო პარტნიორზე.
+            15 წლიანი გამოცდილება და პროფესიონალთა გუნდი, სერვისზე გარანტია, 
+            ორიგინალი ნაწილები, პროფესიონალი ხელოსანის ადგილზე მისვლა ხდება ოპერატიულად, 
+            სარეცხი მანქანის ხელოსანი გამოძახებით
           </p>
         </div>
       </section>

@@ -13,7 +13,22 @@ export default function About() {
           name="description"
           content="გაიგეთ მეტი DrWash-ის შესახებ — სარეცხი მანქანის შეკეთების პროფესიონალური სერვისი თბილისში. გამოცდილება, სანდოობა და გარანტია."
         />
-        <link rel="canonical" href="https://drwash.ge/about" />
+
+        <meta 
+         name="keywords"
+         content="სარეცხის ხელოსანი, სარეცხი მანქანის ჩაბარება, სარეცხი მანქანის ხელოსანი, სარეცხი მანქანების ხელოსანი, სარეცხი მანქანის ხელოსანი გამოძახებით, სარეცხის მანქანის, გამოძახების სერვისი, ადგილზე მისვლა,samsung,bosh,beko,Indesit,Gorenje">          
+         </meta>
+
+         <meta property="og:title" content="სარეცხი მანქანის შეკეთება ადგილზე"></meta>
+         <meta property="og:description" content="სწრაფი და ხარისხიანი მოსახურეობა. Book now."></meta>
+         <meta property="og:type" content="website"></meta>
+         <meta name="twitter:title" content="Washing Machine Repair in Tbilisi"></meta>
+         <meta name="twitter:description" content="Affordable and fast appliance repair service."></meta>
+         <meta name="geo.region" content="GE-TB"></meta>
+         <meta name="geo.placename" content="Tbilisi"></meta>
+         <meta name="twitter:title" content="Washing Machine Repair in Tbilisi"></meta>
+         <meta name="twitter:description" content="Affordable and fast appliance repair service."></meta>
+         <link rel="canonical" href="https://drwash.ge/about" />
       </Helmet>
 
       {/* Hero */}
@@ -46,7 +61,7 @@ export default function About() {
               გამოცდილება
             </h3>
             <p className="mt-2 text-gray-600">
-              10+ წელზე მეტი პრაქტიკა ტექნიკის სერვისში.
+              1+ წელზე მეტი პრაქტიკა ტექნიკის სერვისში.
             </p>
           </div>
           <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">

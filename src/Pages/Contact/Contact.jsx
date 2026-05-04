@@ -12,8 +12,19 @@ export default function Contact() {
         <title>კონტაქტი | DrWash</title>
         <meta
           name="description"
-          content="დაგვიკავშირდით სარეცხი მანქანის შეკეთებისთვის თბილისში — ტელეფონი, ელ-ფოსტა, სამუშაო საათები და მისამართი."
+          content="დაგვიკავშირდით სარეცხი მანქანის შეკეთებისთვის თბილისში — ტელეფონი, ელ-ფოსტა, სამუშაო საათები და მისამართი."          
         />
+         <meta 
+         name="keywords"
+         content="სარეცხის ხელოსანი,სარეცხი მანქანის ჩაბარეაბ, სარეცხი მანქანის ხელოსანი, სარეცხი მანქანების ხელოსანი, სარეცხი მანქანის ხელოსანი გამოძახებით, სარეცხის მანქანის, გამოძახების სერვისი, ადგილზე მისვლა,samsung,bosh,beko,Indesit,Gorenje">          
+         </meta>
+         <meta property="og:title" content="სარეცხი მანქანის შეკეთება ადგილზე"></meta>
+         <meta property="og:description" content="სწრაფი და ხარისხიანი მოსახურეობა. Book now."></meta>
+         <meta property="og:type" content="website"></meta>
+         <meta name="twitter:title" content="Washing Machine Repair in Tbilisi"></meta>
+         <meta name="twitter:description" content="Affordable and fast appliance repair service."></meta>
+         <meta name="geo.region" content="GE-TB"></meta>
+         <meta name="geo.placename" content="Tbilisi"></meta>
         <link rel="canonical" href="https://drwash.ge/contact" />
       </Helmet>
 
@@ -66,8 +77,8 @@ export default function Contact() {
             <h3 className="mt-4 text-xl font-semibold text-blue-700">
               სამუშაო საათები
             </h3>
-            <p className="mt-2 text-gray-600">ორშაბათი - შაბათი</p>
-            <p className="text-gray-600">09:00 - 20:00</p>
+            <p className="mt-2 text-gray-600">ორშაბათი - კვირა</p>
+            <p className="text-gray-600">10:00 - 20:00</p>
           </div>
 
           {/* Address */}

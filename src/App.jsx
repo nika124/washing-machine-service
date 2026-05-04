@@ -9,9 +9,8 @@ import About from "./Pages/About/About.jsx";
 
 export default function App() {
   return (
-    <Router>
+    <Router>      
       <Header />
-
       <main className="min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,5 +22,7 @@ export default function App() {
 
       <Footer />
     </Router>
+
+    
   );
 }

@@ -10,7 +10,7 @@ export default function Footer() {
             <span className="text-blue-500">Dr</span>Wash
           </h3>
           <p className="text-sm mt-2 text-gray-400">
-            სარეცხი მანქანის შეკეთება თბილისში
+            სარეცხი მანქანის შეკეთება თბილისში 
           </p>
         </div>
         <div>
@@ -45,8 +45,8 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="text-white font-semibold mb-3">სამუშაო საათები</h4>
-          <p>ორშ - შაბ: 09:00 - 20:00</p>
-          <p>კვ: დაისვენება</p>
+          <p>ორშ - კვირა: 10:00 - 20:00</p>
+          <p>სარეცხი მანქანების ხელოსანი გამოძახებით</p>
         </div>
       </div>
 
