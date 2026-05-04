@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="DrWash სარეცხი მანქანის შეკეთება თბილისში">
+  <rect width="1200" height="630" fill="#1d4ed8"/>
+  <rect x="72" y="72" width="1056" height="486" rx="32" fill="#ffffff"/>
+  <circle cx="258" cy="326" r="106" fill="#dbeafe"/>
+  <circle cx="258" cy="326" r="72" fill="#60a5fa"/>
+  <circle cx="236" cy="302" r="18" fill="#1d4ed8"/>
+  <rect x="180" y="168" width="156" height="64" rx="14" fill="#1d4ed8"/>
+  <circle cx="314" cy="200" r="13" fill="#facc15"/>
+  <text x="420" y="250" fill="#111827" font-family="Arial, sans-serif" font-size="74" font-weight="700">DrWash</text>
+  <text x="420" y="334" fill="#1f2937" font-family="Arial, sans-serif" font-size="44" font-weight="700">სარეცხი მანქანის შეკეთება თბილისში</text>
+  <text x="420" y="408" fill="#4b5563" font-family="Arial, sans-serif" font-size="32">ადგილზე მისვლა • დიაგნოსტიკა • გარანტია</text>
+  <text x="420" y="478" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="38" font-weight="700">555 123 456</text>
+</svg>

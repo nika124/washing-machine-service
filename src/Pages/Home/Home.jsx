@@ -1,5 +1,6 @@
 // src/Pages/Home/Home.jsx
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import PhoneIcon from "@mui/icons-material/Phone";
 import BuildIcon from "@mui/icons-material/Build";
 import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
@@ -12,20 +13,28 @@ export default function Home() {
         <title>სარეცხი მანქანის შეკეთება თბილისში | DrWash</title>
         <meta
           name="description"
-          content="პროფესიონალური სარეცხი მანქანის შეკეთება თბილისში. სწრაფი მომსახურება, ხელმისაწვდომი ფასები და გარანტია."                    
+          content="სარეცხი მანქანის შეკეთება თბილისში ადგილზე მისვლით. DrWash გთავაზობთ სწრაფ დიაგნოსტიკას, შეკეთებას და გარანტიას."
         />
-        <meta 
-         name="keywords"
-         content="სარეცხის ხელოსანი,სარეცხი მანქანის ჩაბარეაბ, სარეცხი მანქანის ხელოსანი, სარეცხი მანქანების ხელოსანი, სარეცხი მანქანის ხელოსანი გამოძახებით, სარეცხის მანქანის, გამოძახების სერვისი, ადგილზე მისვლა,samsung,bosh,beko,Indesit,Gorenje">          
-         </meta>
-         <meta property="og:title" content="სარეცხი მანქანის შეკეთება ადგილზე"></meta>
-         <meta property="og:description" content="სწრაფი და ხარისხიანი მოსახურეობა. Book now."></meta>
-         <meta property="og:type" content="website"></meta>
-         <meta name="twitter:title" content="Washing Machine Repair in Tbilisi"></meta>
-         <meta name="twitter:description" content="Affordable and fast appliance repair service."></meta>
-         <meta name="geo.region" content="GE-TB"></meta>
-         <meta name="geo.placename" content="Tbilisi"></meta> 
-         <link rel="canonical" href="https://drwash.ge/about" />
+        <meta property="og:title" content="სარეცხი მანქანის შეკეთება თბილისში | DrWash" />
+        <meta
+          property="og:description"
+          content="გამოიძახეთ სარეცხი მანქანის ხელოსანი თბილისში. ადგილზე მისვლა, დიაგნოსტიკა და შეკეთება გარანტიით."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drwash.ge/" />
+        <meta property="og:site_name" content="DrWash" />
+        <meta property="og:locale" content="ka_GE" />
+        <meta property="og:image" content="https://drwash.ge/og-image.svg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="სარეცხი მანქანის შეკეთება თბილისში | DrWash" />
+        <meta
+          name="twitter:description"
+          content="სწრაფი სერვისი თბილისის მასშტაბით: დიაგნოსტიკა, შეკეთება და გარანტია."
+        />
+        <meta name="twitter:image" content="https://drwash.ge/og-image.svg" />
+        <meta name="geo.region" content="GE-TB" />
+        <meta name="geo.placename" content="Tbilisi" />
+        <link rel="canonical" href="https://drwash.ge/" />
       </Helmet>
 
       {/* Hero */}
@@ -38,13 +47,27 @@ export default function Home() {
             სწრაფი, სანდო და პროფესიონალური სერვისი თქვენი სარეცხი მანქანისთვის.            
             სარეცხი მანქანის ხელოსანი გამოძახება 20 ლარი
           </p>
-          <a
-            href="tel:555123456"
-            className="mt-6 inline-flex items-center gap-2 bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-300 transition"
-          >
-            <PhoneIcon />
-            დაგვირეკეთ  – 555 123 456
-          </a>
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="tel:+995555123456"
+              className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-300 transition"
+            >
+              <PhoneIcon aria-hidden="true" />
+              დაგვირეკეთ – 555 123 456
+            </a>
+            <Link
+              to="/services"
+              className="inline-flex items-center justify-center border border-white/70 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-700 transition"
+            >
+              სერვისების ნახვა
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center border border-white/70 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-700 transition"
+            >
+              კონტაქტი
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -90,14 +113,12 @@ export default function Home() {
             <h3 className="mt-4 text-xl font-semibold text-blue-700">
               დაზიანების  ტიპები
             </h3>
-            <p className="mt-2 text-gray-600">                
-                ელექტრონული დაფის(პლატის) დაზიანება;
-                ბარაბნის შეკეთება;
-                ღვედის შეცვლა;
-                ძრავის შეკეთება/შეცვლა;
-                საკისრების შეცვლა;                                
-                სხვა დეტალების შეცვლა არდგენა;                
-            </p>
+            <ul className="mt-2 text-gray-600 space-y-1 text-left list-disc list-inside">
+              <li>ელექტრონული დაფის დაზიანება</li>
+              <li>ბარაბნის და საკისრების შეკეთება</li>
+              <li>ღვედის, ძრავის და სხვა დეტალების შეცვლა</li>
+              <li>წყლის გაჟონვის და დრენაჟის პრობლემები</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -113,6 +134,12 @@ export default function Home() {
             ორიგინალი ნაწილები, პროფესიონალი ხელოსანის ადგილზე მისვლა ხდება ოპერატიულად, 
             სარეცხი მანქანის ხელოსანი გამოძახებით
           </p>
+          <Link
+            to="/contact"
+            className="mt-6 inline-flex items-center justify-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition"
+          >
+            სარეცხი მანქანის ხელოსნის გამოძახება
+          </Link>
         </div>
       </section>
     </>

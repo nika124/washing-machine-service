@@ -18,8 +18,12 @@ export default function Header() {
 
         {/* Mobile menu button */}
         <button
+          type="button"
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl text-gray-700 focus:outline-none"
+          className="md:hidden text-2xl text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600 rounded"
+          aria-label={open ? "მენიუს დახურვა" : "მენიუს გახსნა"}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? "✖" : "☰"}
         </button>
@@ -33,7 +37,7 @@ export default function Header() {
                 <Link
                   key={item}
                   to={href}
-                  className="relative hover:text-blue-600 transition"
+                  className="group relative hover:text-blue-600 transition"
                 >
                   {item}
                   <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
@@ -46,7 +50,7 @@ export default function Header() {
 
       {/* Mobile Nav */}
       {open && (
-        <nav className="md:hidden bg-gray-50 border-t">
+        <nav id="mobile-navigation" className="md:hidden bg-gray-50 border-t">
           <div className="flex flex-col px-4 py-3 space-y-3 text-gray-700 font-medium">
             <Link to="/" onClick={() => setOpen(false)}>
               მთავარი

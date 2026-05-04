@@ -8,27 +8,31 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>ჩვენს შესახებ | DrWash</title>
+        <title>DrWash-ის შესახებ | სარეცხი მანქანის ხელოსანი თბილისში</title>
         <meta
           name="description"
           content="გაიგეთ მეტი DrWash-ის შესახებ — სარეცხი მანქანის შეკეთების პროფესიონალური სერვისი თბილისში. გამოცდილება, სანდოობა და გარანტია."
         />
-
-        <meta 
-         name="keywords"
-         content="სარეცხის ხელოსანი, სარეცხი მანქანის ჩაბარება, სარეცხი მანქანის ხელოსანი, სარეცხი მანქანების ხელოსანი, სარეცხი მანქანის ხელოსანი გამოძახებით, სარეცხის მანქანის, გამოძახების სერვისი, ადგილზე მისვლა,samsung,bosh,beko,Indesit,Gorenje">          
-         </meta>
-
-         <meta property="og:title" content="სარეცხი მანქანის შეკეთება ადგილზე"></meta>
-         <meta property="og:description" content="სწრაფი და ხარისხიანი მოსახურეობა. Book now."></meta>
-         <meta property="og:type" content="website"></meta>
-         <meta name="twitter:title" content="Washing Machine Repair in Tbilisi"></meta>
-         <meta name="twitter:description" content="Affordable and fast appliance repair service."></meta>
-         <meta name="geo.region" content="GE-TB"></meta>
-         <meta name="geo.placename" content="Tbilisi"></meta>
-         <meta name="twitter:title" content="Washing Machine Repair in Tbilisi"></meta>
-         <meta name="twitter:description" content="Affordable and fast appliance repair service."></meta>
-         <link rel="canonical" href="https://drwash.ge/about" />
+        <meta property="og:title" content="DrWash-ის შესახებ | სარეცხი მანქანის ხელოსანი თბილისში" />
+        <meta
+          property="og:description"
+          content="DrWash სპეციალიზდება სარეცხი მანქანების შეკეთებაში თბილისში და გთავაზობთ სანდო მომსახურებას გარანტიით."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drwash.ge/about" />
+        <meta property="og:site_name" content="DrWash" />
+        <meta property="og:locale" content="ka_GE" />
+        <meta property="og:image" content="https://drwash.ge/og-image.svg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DrWash-ის შესახებ | სარეცხი მანქანის ხელოსანი თბილისში" />
+        <meta
+          name="twitter:description"
+          content="სანდო სერვისი, გამოცდილება, ორიგინალი ნაწილები და გარანტია."
+        />
+        <meta name="twitter:image" content="https://drwash.ge/og-image.svg" />
+        <meta name="geo.region" content="GE-TB" />
+        <meta name="geo.placename" content="Tbilisi" />
+        <link rel="canonical" href="https://drwash.ge/about" />
       </Helmet>
 
       {/* Hero */}
@@ -54,6 +58,9 @@ export default function About() {
 
       {/* Values */}
       <section className="bg-gray-50 py-16 px-6">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+          რატომ ირჩევენ DrWash-ს
+        </h2>
         <div className="max-w-screen-lg mx-auto grid gap-8 md:grid-cols-3 text-center">
           <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
             <StarIcon className="text-blue-600" style={{ fontSize: 48 }} />
@@ -92,7 +99,7 @@ export default function About() {
         </h2>
         <p className="mt-2">დაგვირეკეთ დღესვე და მიიღეთ სანდო სერვისი</p>
         <a
-          href="tel:555123456"
+          href="tel:+995555123456"
           className="mt-6 inline-block bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow hover:bg-yellow-300 transition"
         >
           📞 დაგვირეკეთ – 555 123 456

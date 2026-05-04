@@ -8,20 +8,26 @@ export default function Services() {
   return (
     <>
       <Helmet>
-        <title>სერვისები | DrWash</title>
+        <title>სარეცხი მანქანის სერვისები თბილისში | DrWash</title>
         <meta
           name="description"
-          content="გაეცანით DrWash-ის სერვისებს — გაჟონვის შეკეთება, ძრავის პრობლემების აღმოფხვრა.სარეცხი მანქანის ხელოსანი გამოძახებით, ადგილზე მისვლის სერვისი"          
+          content="DrWash-ის სარეცხი მანქანის სერვისები თბილისში: დიაგნოსტიკა, ადგილზე შეკეთება, გაჟონვის, ბარაბნის, ძრავის და ელექტრონული დაფის პრობლემები."
         />
-        <meta 
-         name="keywords"
-         content="სარეცხის ხელოსანი, სარეცხი მანქანის ჩაბარება, სარეცხი მანქანის ხელოსანი, სარეცხი მანქანების ხელოსანი, სარეცხი მანქანის ხელოსანი გამოძახებით, სარეცხის მანქანის, გამოძახების სერვისი, ადგილზე მისვლა,samsung,bosh,beko,Indesit,Gorenje">          
-         </meta>
-         <meta property="og:title" content="სარეცხი მანქანის შეკეთება ადგილზე"></meta>
-         <meta property="og:description" content="სწრაფი და ხარისხიანი მოსახურეობა. Book now."></meta>
-         <meta property="og:type" content="website"></meta>
-         <meta name="geo.region" content="GE-TB"></meta>
-         <meta name="geo.placename" content="Tbilisi"></meta>
+        <meta
+          property="og:title"
+          content="სარეცხი მანქანის სერვისები თბილისში | DrWash"
+        />
+        <meta
+          property="og:description"
+          content="დიაგნოსტიკა, შეკეთება და გავრცელებული დაზიანებების აღმოფხვრა ადგილზე მისვლით."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://drwash.ge/services" />
+        <meta property="og:site_name" content="DrWash" />
+        <meta property="og:locale" content="ka_GE" />
+        <meta property="og:image" content="https://drwash.ge/og-image.svg" />
+        <meta name="geo.region" content="GE-TB" />
+        <meta name="geo.placename" content="Tbilisi" />
         <link rel="canonical" href="https://drwash.ge/services" />
       </Helmet>
 
@@ -29,13 +35,16 @@ export default function Services() {
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center py-16 px-6">
         <h1 className="text-3xl sm:text-5xl font-extrabold">ჩვენი სერვისები</h1>
         <p className="mt-4 text-lg sm:text-xl text-blue-100">
-          სწრაფი და სანდო მომსახურება ყველა ტიპის სარეცხი მანქანისთვის,
-          ასევე ვიბარებთ სარეცხ მანქანებს
+          სწრაფი და სანდო მომსახურება ყველა ტიპის სარეცხი მანქანისთვის, ასევე
+          ვიბარებთ სარეცხ მანქანებს
         </p>
       </section>
 
       {/* Services Grid */}
       <section className="max-w-screen-xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+          სარეცხი მანქანის შეკეთების ძირითადი მიმართულებები
+        </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* Leakage Repair */}
           <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col items-center text-center">
@@ -56,8 +65,8 @@ export default function Services() {
               შეკეთება
             </h3>
             <p className="mt-2 text-gray-600">
-              სარეცხი მანქანის შეკეთება ხდება ადგილზე. 
-              შესაძლებელია საჭირო გახდეს სარეცხი მანქანის/ნაწილის სერვისცენტრში გადატანა   
+              სარეცხი მანქანის შეკეთება ხდება ადგილზე. შესაძლებელია საჭირო
+              გახდეს სარეცხი მანქანის/ნაწილის სერვისცენტრში გადატანა
             </p>
           </div>
 
@@ -65,16 +74,14 @@ export default function Services() {
           <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col items-center text-center">
             <SettingsIcon className="text-blue-600" style={{ fontSize: 48 }} />
             <h3 className="mt-4 text-xl font-semibold text-blue-700">
-              დაზიანების  ტიპები
+              დაზიანების ტიპები
             </h3>
-            <p className="mt-2 text-gray-600">
-                ელექტრონული დაფის(პლატის) დაზიანება;
-                ბარაბნის შეკეთება;
-                ღვედის შეცვლა;
-                ძრავის შეკეთება/შეცვლა;
-                საკისრების შეცვლა;                                
-                სხვა დეტალების შეცვლა არდგენა;
-            </p>
+            <ul className="mt-2 text-gray-600 space-y-1 text-left list-disc list-inside">
+              <li>ელექტრონული დაფის დაზიანება</li>
+              <li>ბარაბნის და საკისრების შეკეთება</li>
+              <li>ღვედის და ძრავის შეცვლა ან აღდგენა</li>
+              <li>სხვა მექანიკური და ელექტრო დეტალების შეცვლა</li>
+            </ul>
           </div>
         </div>
       </section>
