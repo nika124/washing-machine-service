@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import StarIcon from "@mui/icons-material/Star";
 import BuildIcon from "@mui/icons-material/Build";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 export default function About() {
   return (
@@ -29,19 +30,19 @@ export default function About() {
       </Helmet>
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center py-16 px-6">
-        <h1 className="text-3xl sm:text-5xl font-extrabold">ჩვენს შესახებ</h1>
-        <p className="mt-4 text-lg sm:text-xl text-blue-100">
+      <section className="bg-blue-50 border-b border-blue-100 text-center py-12 sm:py-14 px-6">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">ჩვენს შესახებ</h1>
+        <p className="mt-4 text-base sm:text-lg text-slate-600">
           პროფესიონალები სარეცხი მანქანის შეკეთებაში
         </p>
       </section>
 
       {/* About Story */}
-      <section className="max-w-screen-lg mx-auto px-6 py-16 text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">
+      <section className="max-w-screen-lg mx-auto px-6 py-12 sm:py-14 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-6">
           ვინ ვართ ჩვენ?
         </h2>
-        <p className="text-gray-600 text-lg leading-relaxed">
+        <p className="text-slate-600 text-lg leading-relaxed">
           DrWash არის გუნდი, რომელიც სპეციალიზებულია სარეცხი მანქანების
           შეკეთებაში. გვაქვს მრავალწლიანი გამოცდილება, ვმუშაობთ ორიგინალი
           ნაწილებით და გთავაზობთ გარანტიას ყველა სერვისზე. ჩვენი მიზანია ვიყოთ
@@ -50,35 +51,35 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="bg-gray-50 py-16 px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+      <section className="bg-slate-50 py-12 sm:py-14 px-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-800 mb-10">
           რატომ ირჩევენ DrWash-ს
         </h2>
-        <div className="max-w-screen-lg mx-auto grid gap-8 md:grid-cols-3 text-center">
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+        <div className="max-w-screen-lg mx-auto grid gap-6 md:grid-cols-3">
+          <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col items-start text-left">
             <StarIcon className="text-blue-600" style={{ fontSize: 48 }} />
-            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+            <h3 className="mt-4 text-xl font-semibold text-slate-900">
               გამოცდილება
             </h3>
-            <p className="mt-2 text-gray-600">
-              1+ წელზე მეტი პრაქტიკა ტექნიკის სერვისში.
+            <p className="mt-2 text-slate-600 leading-relaxed">
+              15 წლიანი პრაქტიკა ტექნიკის სერვისში.
             </p>
           </div>
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+          <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col items-start text-left">
             <BuildIcon className="text-blue-600" style={{ fontSize: 48 }} />
-            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+            <h3 className="mt-4 text-xl font-semibold text-slate-900">
               ხარისხი
             </h3>
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-slate-600 leading-relaxed">
               მხოლოდ ორიგინალი ნაწილები და სანდო ტექნოლოგიები.
             </p>
           </div>
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+          <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col items-start text-left">
             <VerifiedIcon className="text-blue-600" style={{ fontSize: 48 }} />
-            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+            <h3 className="mt-4 text-xl font-semibold text-slate-900">
               გარანტია
             </h3>
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-slate-600 leading-relaxed">
               ყველა სერვისზე გაწერილი გარანტია და სწრაფი მომსახურება.
             </p>
           </div>
@@ -86,16 +87,17 @@ export default function About() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-blue-700 text-white text-center py-12 px-6">
+      <section className="bg-blue-700 text-white text-center py-10 sm:py-12 px-6">
         <h2 className="text-2xl sm:text-3xl font-bold">
           მზად ხართ სარეცხი მანქანის შეკეთებისთვის?
         </h2>
         <p className="mt-2">დაგვირეკეთ დღესვე და მიიღეთ სანდო სერვისი</p>
         <a
           href="tel:+995555123456"
-          className="mt-6 inline-block bg-yellow-400 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow hover:bg-yellow-300 transition"
+          className="mt-6 inline-flex items-center justify-center gap-2 bg-white text-blue-700 font-semibold py-3 px-6 rounded-lg shadow-sm hover:bg-blue-50 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-700"
         >
-          📞 დაგვირეკეთ – 555 123 456
+          <PhoneIcon aria-hidden="true" />
+          დაგვირეკეთ – 555 123 456
         </a>
       </section>
     </>

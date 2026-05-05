@@ -31,84 +31,89 @@ export default function Contact() {
       </Helmet>
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center py-16 px-6">
-        <h1 className="text-3xl sm:text-5xl font-extrabold">დაგვიკავშირდით</h1>
-        <p className="mt-4 text-lg sm:text-xl text-blue-100">
+      <section className="bg-blue-50 border-b border-blue-100 text-center py-12 sm:py-14 px-6">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">დაგვიკავშირდით</h1>
+        <p className="mt-4 text-base sm:text-lg text-slate-600">
           მზად ვართ დაგეხმაროთ ნებისმიერ დროს
         </p>
       </section>
 
       {/* Contact Info */}
-      <section className="max-w-screen-md mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+      <section className="max-w-screen-lg mx-auto px-6 py-12 sm:py-14">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-800 mb-10">
           სარეცხი მანქანის ხელოსნის გამოძახება
         </h2>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {/* Phone */}
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-md transition flex flex-col items-center text-center">
-            <PhoneIcon className="text-blue-600" style={{ fontSize: 48 }} />
-            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+          <a
+            href="tel:+995555123456"
+            className="p-6 bg-blue-600 text-white rounded-lg shadow-sm hover:bg-blue-700 hover:shadow-md transition flex flex-col items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <PhoneIcon aria-hidden="true" style={{ fontSize: 48 }} />
+            <h3 className="mt-4 text-xl font-semibold">
               ტელეფონი
             </h3>
-            <p className="mt-2 text-gray-600">
-              <a href="tel:+995555123456" className="text-blue-500 hover:underline">
-                555 123 456
-              </a>
+            <p className="mt-2 text-lg font-semibold">
+              555 123 456
             </p>
-          </div>
-
-          {/* Email */}
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-md transition flex flex-col items-center text-center">
-            <EmailIcon className="text-blue-600" style={{ fontSize: 48 }} />
-            <h3 className="mt-4 text-xl font-semibold text-blue-700">
-              ელ-ფოსტა
-            </h3>
-            <p className="mt-2 text-gray-600">
-              <a
-                href="mailto:info@drwash.ge"
-                className="text-blue-500 hover:underline"
-              >
-                info@drwash.ge
-              </a>
+            <p className="mt-1 text-sm text-blue-100">
+              სწრაფი გზა ხელოსნის გამოსაძახებლად
             </p>
-          </div>
+          </a>
 
           {/* WhatsApp */}
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-md transition flex flex-col items-center text-center">
-            <WhatsAppIcon className="text-blue-600" style={{ fontSize: 48 }} />
-            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+          <a
+            href="https://wa.me/995555123456"
+            className="p-6 bg-white rounded-lg border border-blue-200 shadow-sm hover:border-blue-300 hover:shadow-md transition flex flex-col items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <WhatsAppIcon className="text-blue-600" aria-hidden="true" style={{ fontSize: 48 }} />
+            <h3 className="mt-4 text-xl font-semibold text-slate-900">
               WhatsApp
             </h3>
-            <p className="mt-2 text-gray-600">
-              <a
-                href="https://wa.me/995555123456"
-                className="text-blue-500 hover:underline"
-              >
-                მოგვწერეთ WhatsApp-ზე
-              </a>
+            <p className="mt-2 text-lg font-semibold text-blue-700">
+              მოგვწერეთ WhatsApp-ზე
             </p>
-          </div>
+            <p className="mt-1 text-sm text-slate-500">
+              მოსახერხებელია ფოტოებისა და დეტალების გასაგზავნად
+            </p>
+          </a>
+        </div>
+
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
+          {/* Email */}
+          <a
+            href="mailto:info@drwash.ge"
+            className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <EmailIcon className="text-blue-600" aria-hidden="true" style={{ fontSize: 42 }} />
+            <h3 className="mt-4 text-lg font-semibold text-slate-900">
+              ელ-ფოსტა
+            </h3>
+            <p className="mt-2 text-blue-700">
+              info@drwash.ge
+            </p>
+          </a>
 
           {/* Working Hours */}
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-md transition flex flex-col items-center text-center">
+          <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col items-start">
             <AccessTimeIcon
               className="text-blue-600"
-              style={{ fontSize: 48 }}
+              style={{ fontSize: 42 }}
             />
-            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+            <h3 className="mt-4 text-lg font-semibold text-slate-900">
               სამუშაო საათები
             </h3>
-            <p className="mt-2 text-gray-600">ორშაბათი - კვირა</p>
-            <p className="text-gray-600">10:00 - 20:00</p>
+            <p className="mt-2 text-slate-600">ორშაბათი - კვირა</p>
+            <p className="text-slate-600">10:00 - 20:00</p>
           </div>
 
           {/* Address */}
-          <div className="p-6 bg-white rounded-xl shadow hover:shadow-md transition flex flex-col items-center text-center">
-            <PlaceIcon className="text-blue-600" style={{ fontSize: 48 }} />
-            <h3 className="mt-4 text-xl font-semibold text-blue-700">
+          <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col items-start">
+            <PlaceIcon className="text-blue-600" style={{ fontSize: 42 }} />
+            <h3 className="mt-4 text-lg font-semibold text-slate-900">
               მისამართი
             </h3>
-            <p className="mt-2 text-gray-600">თბილისი, საქართველო</p>
+            <p className="mt-2 text-slate-600">თბილისი, საქართველო</p>
           </div>
         </div>
       </section>
