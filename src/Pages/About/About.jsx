@@ -23,13 +23,6 @@ export default function About() {
         <meta property="og:site_name" content="DrWash" />
         <meta property="og:locale" content="ka_GE" />
         <meta property="og:image" content="https://drwash.ge/og-image.svg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="DrWash-ის შესახებ | სარეცხი მანქანის ხელოსანი თბილისში" />
-        <meta
-          name="twitter:description"
-          content="სანდო სერვისი, გამოცდილება, ორიგინალი ნაწილები და გარანტია."
-        />
-        <meta name="twitter:image" content="https://drwash.ge/og-image.svg" />
         <meta name="geo.region" content="GE-TB" />
         <meta name="geo.placename" content="Tbilisi" />
         <link rel="canonical" href="https://drwash.ge/about" />
