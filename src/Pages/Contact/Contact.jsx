@@ -31,7 +31,7 @@ export default function Contact() {
       </Helmet>
 
       {/* Hero */}
-      <section className="bg-blue-50 border-b border-blue-100 text-center py-12 sm:py-14 px-6">
+      <section className="bg-blue-50 border-b border-blue-100 text-center py-10 sm:py-12 px-5 sm:px-6">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">დაგვიკავშირდით</h1>
         <p className="mt-4 text-base sm:text-lg text-slate-600">
           მზად ვართ დაგეხმაროთ ნებისმიერ დროს
@@ -39,7 +39,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Info */}
-      <section className="max-w-screen-lg mx-auto px-6 py-12 sm:py-14">
+      <section className="max-w-screen-lg mx-auto px-5 sm:px-6 py-10 sm:py-12">
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-800 mb-10">
           სარეცხი მანქანის ხელოსნის გამოძახება
         </h2>
@@ -47,9 +47,9 @@ export default function Contact() {
           {/* Phone */}
           <a
             href="tel:+995555123456"
-            className="p-6 bg-blue-600 text-white rounded-lg shadow-sm hover:bg-blue-700 hover:shadow-md transition flex flex-col items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            className="p-5 sm:p-6 bg-blue-600 text-white rounded-lg shadow-md shadow-blue-900/10 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-900/15 active:translate-y-px active:bg-blue-800 transition flex flex-col items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
-            <PhoneIcon aria-hidden="true" style={{ fontSize: 48 }} />
+            <PhoneIcon aria-hidden="true" style={{ fontSize: 42 }} />
             <h3 className="mt-4 text-xl font-semibold">
               ტელეფონი
             </h3>
@@ -64,9 +64,9 @@ export default function Contact() {
           {/* WhatsApp */}
           <a
             href="https://wa.me/995555123456"
-            className="p-6 bg-white rounded-lg border border-blue-200 shadow-sm hover:border-blue-300 hover:shadow-md transition flex flex-col items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            className="p-5 sm:p-6 bg-blue-50 rounded-lg border border-blue-300 shadow-md shadow-blue-900/5 hover:border-blue-500 hover:bg-white hover:shadow-lg hover:shadow-blue-900/10 active:translate-y-px active:bg-blue-100 transition flex flex-col items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
-            <WhatsAppIcon className="text-blue-600" aria-hidden="true" style={{ fontSize: 48 }} />
+            <WhatsAppIcon className="text-blue-700" aria-hidden="true" style={{ fontSize: 42 }} />
             <h3 className="mt-4 text-xl font-semibold text-slate-900">
               WhatsApp
             </h3>
@@ -83,9 +83,9 @@ export default function Contact() {
           {/* Email */}
           <a
             href="mailto:info@drwash.ge"
-            className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            className="p-5 sm:p-6 bg-white rounded-lg border border-slate-300 shadow-sm hover:border-blue-300 hover:shadow-md active:translate-y-px active:bg-slate-50 transition flex flex-col items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
-            <EmailIcon className="text-blue-600" aria-hidden="true" style={{ fontSize: 42 }} />
+            <EmailIcon className="text-blue-600" aria-hidden="true" style={{ fontSize: 38 }} />
             <h3 className="mt-4 text-lg font-semibold text-slate-900">
               ელ-ფოსტა
             </h3>
@@ -95,10 +95,10 @@ export default function Contact() {
           </a>
 
           {/* Working Hours */}
-          <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col items-start">
+          <div className="p-5 sm:p-6 bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col items-start">
             <AccessTimeIcon
               className="text-blue-600"
-              style={{ fontSize: 42 }}
+              style={{ fontSize: 38 }}
             />
             <h3 className="mt-4 text-lg font-semibold text-slate-900">
               სამუშაო საათები
@@ -108,8 +108,8 @@ export default function Contact() {
           </div>
 
           {/* Address */}
-          <div className="p-6 bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col items-start">
-            <PlaceIcon className="text-blue-600" style={{ fontSize: 42 }} />
+          <div className="p-5 sm:p-6 bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col items-start">
+            <PlaceIcon className="text-blue-600" style={{ fontSize: 38 }} />
             <h3 className="mt-4 text-lg font-semibold text-slate-900">
               მისამართი
             </h3>

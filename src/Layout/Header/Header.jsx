@@ -15,7 +15,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-sm shadow-slate-900/5 backdrop-blur">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link
@@ -38,16 +38,16 @@ export default function Header() {
         </button>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-7 text-slate-700 font-medium">
+        <nav className="hidden md:flex gap-2 text-slate-700 font-medium">
           {navItems.map((item) => (
             <NavLink
               key={item.href}
               to={item.href}
               className={({ isActive }) =>
-                `rounded px-1 py-2 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-4 ${
+                `rounded-lg px-3 py-2 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-4 ${
                   isActive
-                    ? "text-blue-700"
-                    : "hover:text-blue-700"
+                    ? "bg-blue-50 text-blue-700 shadow-sm"
+                    : "hover:bg-slate-50 hover:text-blue-700"
                 }`
               }
             >
@@ -59,7 +59,7 @@ export default function Header() {
 
       {/* Mobile Nav */}
       {open && (
-        <nav id="mobile-navigation" className="md:hidden bg-white border-t border-slate-200">
+        <nav id="mobile-navigation" className="md:hidden bg-white border-t border-slate-200 shadow-md shadow-slate-900/5">
           <div className="flex flex-col px-4 py-3 text-slate-700 font-medium">
             {navItems.map((item) => (
               <NavLink
@@ -68,7 +68,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   `rounded-md px-3 py-3 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 ${
-                    isActive ? "bg-blue-50 text-blue-700" : "hover:bg-slate-50"
+                    isActive ? "bg-blue-50 text-blue-700 shadow-sm" : "hover:bg-slate-50 hover:text-blue-700"
                   }`
                 }
               >
