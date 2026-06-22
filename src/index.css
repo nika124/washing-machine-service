@@ -9,10 +9,16 @@
 
   body {
     margin: 0;
-    background: #ffffff;
+    min-width: 320px;
+    overflow-x: hidden;
+    background: #f8fafc;
     color: #0f172a;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       "Noto Sans Georgian", "Noto Sans", Arial, sans-serif;
+  }
+
+  img {
+    max-width: 100%;
   }
 
   a,
@@ -24,5 +30,26 @@
   ::selection {
     background: #bfdbfe;
     color: #0f172a;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-[0_14px_45px_-25px_rgba(15,23,42,0.3)];
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2;
+  }
+
+  .blue-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
 }

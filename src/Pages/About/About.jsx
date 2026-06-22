@@ -23,7 +23,7 @@ export default function About() {
         intro="DrWash მომხმარებლებს სთავაზობს სარეცხი მანქანის დიაგნოსტიკას, შეკეთებას, მონტაჟსა და მოვლას თბილისის მასშტაბით."
       />
       <Section title="როგორ ვმუშაობთ">
-        <div className="max-w-3xl space-y-4 leading-7 text-slate-700">
+        <div className="surface-card max-w-3xl space-y-4 p-5 leading-7 text-slate-700 sm:p-7">
           <p>
             მომსახურება იწყება ბრენდის, მოდელისა და სიმპტომის დაზუსტებით. ადგილზე
             შემოწმების შემდეგ მომხმარებელთან თანხმდება სამუშაოს მოცულობა და ფასი.
@@ -43,10 +43,10 @@ export default function About() {
         }))} columns="md:grid-cols-2" />
       </Section>
       <Section title="დამატებითი ინფორმაცია">
-        <div className="flex flex-wrap gap-4">
-          <Link className="font-bold text-blue-700 hover:text-blue-900" to="/prices">ფასების პრინციპები →</Link>
-          <Link className="font-bold text-blue-700 hover:text-blue-900" to="/faq">ხშირი კითხვები →</Link>
-          <Link className="font-bold text-blue-700 hover:text-blue-900" to="/contact">კონტაქტი →</Link>
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <Link className="inline-flex min-h-11 items-center justify-center rounded-full bg-slate-950 px-5 font-bold text-white hover:bg-blue-700" to="/prices">ფასების პრინციპები →</Link>
+          <Link className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-5 font-bold text-slate-800 hover:border-blue-400 hover:text-blue-700" to="/faq">ხშირი კითხვები →</Link>
+          <Link className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-5 font-bold text-slate-800 hover:border-blue-400 hover:text-blue-700" to="/contact">კონტაქტი →</Link>
         </div>
       </Section>
       <CTA />

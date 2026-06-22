@@ -60,20 +60,20 @@ export function PricesPage() {
       >
         <div className="grid gap-4 md:grid-cols-2">
           {priceItems.map((item) => (
-            <article key={item.title} className="rounded-xl border border-slate-200 bg-white p-5">
-              <h2 className="text-lg font-bold text-slate-950">{item.title}</h2>
+            <article key={item.title} className="surface-card p-5 sm:p-6">
+              <h2 className="text-lg font-black text-slate-950">{item.title}</h2>
               <p className="mt-2 leading-7 text-slate-600">{item.text}</p>
-              <p className="mt-3 text-sm font-semibold text-blue-800">დამოკიდებულია შემთხვევაზე</p>
+              <p className="mt-4 inline-flex rounded-full bg-blue-50 px-3 py-1.5 text-sm font-bold text-blue-700">დამოკიდებულია შემთხვევაზე</p>
             </article>
           ))}
         </div>
       </Section>
       <Section tone="muted" title="ფასზე მოქმედი ფაქტორები">
-        <ul className="list-inside list-disc space-y-2 leading-7 text-slate-700">
-          <li>სარეცხი მანქანის ბრენდი, მოდელი და კონსტრუქცია</li>
-          <li>დაზიანების მიზეზი და სამუშაოს მოცულობა</li>
-          <li>საჭირო დეტალის ფასი და ხელმისაწვდომობა</li>
-          <li>მონტაჟის შემთხვევაში — არსებული კომუნიკაციების მდგომარეობა</li>
+        <ul className="grid gap-3 sm:grid-cols-2">
+          <li className="surface-card p-5 leading-7 text-slate-700">სარეცხი მანქანის ბრენდი, მოდელი და კონსტრუქცია</li>
+          <li className="surface-card p-5 leading-7 text-slate-700">დაზიანების მიზეზი და სამუშაოს მოცულობა</li>
+          <li className="surface-card p-5 leading-7 text-slate-700">საჭირო დეტალის ფასი და ხელმისაწვდომობა</li>
+          <li className="surface-card p-5 leading-7 text-slate-700">მონტაჟის შემთხვევაში — არსებული კომუნიკაციების მდგომარეობა</li>
         </ul>
       </Section>
       <Section title="სერვისები და გავრცელებული პრობლემები">
@@ -127,19 +127,19 @@ export function ContactPage() {
       />
       <Section title="საკონტაქტო ინფორმაცია">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <a className="rounded-xl bg-blue-700 p-5 text-white hover:bg-blue-800" href={contactLinks.phone}>
+          <a className="rounded-2xl bg-blue-600 p-5 text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-1 hover:bg-blue-700" href={contactLinks.phone}>
             <span className="text-sm text-blue-100">ტელეფონი</span>
             <strong className="mt-2 block text-xl">{site.phone.display}</strong>
           </a>
-          <a className="rounded-xl border border-blue-200 bg-blue-50 p-5 text-blue-900 hover:border-blue-500" href={contactLinks.whatsapp}>
+          <a className="surface-card p-5 text-blue-900 transition hover:-translate-y-1 hover:border-blue-400" href={contactLinks.whatsapp}>
             <span className="text-sm text-blue-700">შეტყობინება</span>
             <strong className="mt-2 block text-xl">WhatsApp</strong>
           </a>
-          <a className="rounded-xl border border-slate-200 bg-white p-5 text-slate-900 hover:border-blue-400" href={contactLinks.email}>
+          <a className="surface-card p-5 text-slate-900 transition hover:-translate-y-1 hover:border-blue-400" href={contactLinks.email}>
             <span className="text-sm text-slate-500">ელფოსტა</span>
             <strong className="mt-2 block break-all">{site.email.value}</strong>
           </a>
-          <div className="rounded-xl border border-slate-200 bg-white p-5">
+          <div className="surface-card p-5">
             <span className="text-sm text-slate-500">სამუშაო საათები</span>
             <strong className="mt-2 block">{site.hours.label}</strong>
           </div>
@@ -153,14 +153,14 @@ export function ContactPage() {
             "თბილისის უბანი და მისამართის ორიენტირი",
             "ფოტო ან ვიდეო WhatsApp-ზე, თუ სიმპტომი ჩანს ან ისმის",
           ].map((item) => (
-            <li key={item} className="rounded-lg border border-slate-200 bg-white p-4 text-slate-700">{item}</li>
+            <li key={item} className="surface-card p-5 leading-7 text-slate-700">{item}</li>
           ))}
         </ul>
       </Section>
       <Section title="მომსახურების უბნები">
         <div className="flex flex-wrap gap-2">
           {locations.map((location) => (
-            <Link key={location.path} to={location.path} className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-blue-500 hover:text-blue-700">
+            <Link key={location.path} to={location.path} className="rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 shadow-sm hover:border-blue-500 hover:text-blue-700">
               {location.name}
             </Link>
           ))}

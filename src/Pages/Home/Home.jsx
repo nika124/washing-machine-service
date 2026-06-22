@@ -4,11 +4,13 @@ import JsonLd from "../../Components/SEO/JsonLd.jsx";
 import { faqSchema, localBusinessSchema } from "../../Components/SEO/schemas.js";
 import { CTA, FAQList, LinkCards, Section } from "../../Components/Common/Content.jsx";
 import { brands } from "../../data/brands.js";
+import { articles } from "../../data/blog.js";
 import { faqs } from "../../data/faqs.js";
 import { locations } from "../../data/locations.js";
 import { problems } from "../../data/problems.js";
 import { services } from "../../data/services.js";
 import { contactLinks, site } from "../../data/site.js";
+import { siteImages } from "../../data/visuals.js";
 
 export default function Home() {
   const previewFaqs = faqs.slice(0, 4);
@@ -23,121 +25,205 @@ export default function Home() {
       <JsonLd data={localBusinessSchema()} />
       <JsonLd data={faqSchema(previewFaqs)} />
 
-      <section className="border-b border-blue-100 bg-blue-50">
-        <div className="mx-auto grid max-w-screen-xl items-center gap-8 px-5 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.15fr_0.85fr]">
-          <div>
-            <p className="mb-2 text-sm font-bold uppercase tracking-wide text-blue-700">
+      <section className="px-4 pb-10 pt-4 sm:px-6 sm:pb-14 sm:pt-6">
+        <div className="relative mx-auto min-h-[570px] max-w-6xl overflow-hidden rounded-[30px] bg-slate-950 shadow-[0_28px_80px_-38px_rgba(15,23,42,0.8)] sm:min-h-[600px] lg:min-h-[620px]">
+          <img
+            src={siteImages.hero.src}
+            alt={siteImages.hero.alt}
+            width="1448"
+            height="1086"
+            decoding="async"
+            fetchpriority="high"
+            className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent lg:hidden" />
+          <div className="blue-grid absolute inset-0 opacity-30" />
+          <div className="relative flex min-h-[570px] items-end px-5 py-8 sm:min-h-[600px] sm:items-center sm:px-10 sm:py-12 lg:min-h-[620px] lg:px-14">
+            <div className="max-w-2xl text-white">
+              <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.2em] text-blue-300">
               DrWash • თბილისი
-            </p>
-            <h1 className="text-3xl font-extrabold leading-tight text-slate-950 sm:text-4xl lg:text-5xl">
-              სარეცხი მანქანის შეკეთება თბილისში გამოძახებით
-            </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-700">
-              სარეცხი მანქანის დიაგნოსტიკა, შეკეთება და მონტაჟი მომხმარებლის
-              მისამართზე. მოგვწერეთ ბრენდი, პრობლემა და თბილისის უბანი ვიზიტის
-              დასაგეგმად.
-            </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <a className="inline-flex justify-center rounded-lg bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2" href={contactLinks.phone}>
-                დარეკვა — {site.phone.display}
-              </a>
-              <a className="inline-flex justify-center rounded-lg border border-blue-300 bg-white px-5 py-3 font-bold text-blue-800 hover:border-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" href={contactLinks.whatsapp}>
-                WhatsApp
-              </a>
-              <Link className="inline-flex justify-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-bold text-slate-700 hover:border-blue-400 hover:text-blue-800" to="/services">
-                სერვისების ნახვა
-              </Link>
+              </p>
+              <h1 className="text-3xl font-black leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+                სარეცხი მანქანის შეკეთება თბილისში გამოძახებით
+              </h1>
+              <p className="mt-5 max-w-xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
+                სარეცხი მანქანის დიაგნოსტიკა, შეკეთება და მონტაჟი მომხმარებლის
+                მისამართზე. მოგვწერეთ ბრენდი, პრობლემა და თბილისის უბანი ვიზიტის
+                დასაგეგმად.
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <a className="focus-ring inline-flex min-h-12 items-center justify-center rounded-full bg-blue-600 px-6 font-bold text-white shadow-lg shadow-blue-950/30 transition hover:bg-blue-500" href={contactLinks.phone}>
+                  დარეკვა — {site.phone.display}
+                </a>
+                <a className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/40 bg-white/10 px-6 font-bold text-white backdrop-blur transition hover:bg-white hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" href={contactLinks.whatsapp}>
+                  WhatsApp
+                </a>
+                <Link className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/40 bg-white/10 px-6 font-bold text-white backdrop-blur transition hover:bg-white hover:text-slate-950" to="/services">
+                  სერვისების ნახვა
+                </Link>
+              </div>
+              <ul className="mt-7 flex flex-wrap gap-2 text-xs font-bold text-white sm:text-sm">
+                <li className="rounded-full border border-white/20 bg-white/10 px-3 py-2 backdrop-blur">ადგილზე მისვლა</li>
+                <li className="rounded-full border border-white/20 bg-white/10 px-3 py-2 backdrop-blur">დიაგნოსტიკა</li>
+                <li className="rounded-full border border-white/20 bg-white/10 px-3 py-2 backdrop-blur">მონტაჟი</li>
+                <li className="rounded-full border border-white/20 bg-white/10 px-3 py-2 backdrop-blur">{site.hours.label}</li>
+              </ul>
             </div>
-            <ul className="mt-7 flex flex-wrap gap-2 text-sm font-semibold text-slate-700">
-              <li className="rounded-full border border-blue-200 bg-white px-3 py-2">ადგილზე მისვლა</li>
-              <li className="rounded-full border border-blue-200 bg-white px-3 py-2">დიაგნოსტიკა</li>
-              <li className="rounded-full border border-blue-200 bg-white px-3 py-2">მონტაჟი</li>
-              <li className="rounded-full border border-blue-200 bg-white px-3 py-2">{site.hours.label}</li>
-            </ul>
           </div>
-          <figure className="mx-auto w-full max-w-lg overflow-hidden rounded-2xl border border-blue-200 bg-white p-2 shadow-lg shadow-blue-900/10">
-            <img
-              src="/images/hero-service-placeholder.png"
-              alt="სარეცხი მანქანის ხელოსანი თბილისში მოწყობილობის შემოწმებისას"
-              width="960"
-              height="720"
-              decoding="async"
-              fetchpriority="high"
-              className="aspect-[4/3] w-full rounded-xl object-cover"
-            />
-          </figure>
         </div>
       </section>
 
       <Section
-        title="სარეცხი მანქანის ძირითადი სერვისები"
-        intro="შეკეთებამდე ვადგენთ მიზეზს, მონტაჟისას კი ვამოწმებთ შეერთებას, გასწორებასა და საცდელ მუშაობას."
+        title="გავრცელებული პრობლემები"
+        intro="აირჩიეთ სიმპტომი და ნახეთ შესაძლო მიზეზები, უსაფრთხო პირველი ნაბიჯები და შესაბამისი სერვისი."
       >
-        <LinkCards items={services.map((service) => ({
-          path: service.path,
-          title: service.name,
-          text: service.intro,
-        }))} columns="md:grid-cols-2" />
-      </Section>
-
-      <Section tone="muted" title="გავრცელებული პრობლემები">
         <LinkCards items={problems.map((problem) => ({
           path: problem.path,
           title: problem.name,
           text: problem.description,
-        }))} />
-        <Link className="mt-6 inline-flex font-bold text-blue-700 hover:text-blue-900" to="/problems">
+        }))} columns="md:grid-cols-2" />
+        <Link className="mt-7 inline-flex min-h-11 items-center rounded-full bg-slate-950 px-5 font-bold text-white hover:bg-blue-700" to="/problems">
           ყველა პრობლემის ნახვა →
         </Link>
       </Section>
 
-      <Section title="სარეცხი მანქანის ბრენდები">
-        <div className="flex flex-wrap gap-3">
-          {brands.map((brand) => (
-            <Link key={brand.path} className="rounded-full border border-slate-300 px-4 py-2 font-semibold text-slate-700 hover:border-blue-500 hover:text-blue-800" to={brand.path}>
-              {brand.name}
-            </Link>
-          ))}
-        </div>
-        <Link className="mt-6 inline-flex font-bold text-blue-700 hover:text-blue-900" to="/brands">
-          ბრენდების გვერდი →
-        </Link>
-      </Section>
-
-      <Section tone="muted" title="მომსახურების უბნები თბილისში">
-        <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {locations.map((location) => (
-            <Link key={location.path} className="rounded-lg border border-slate-200 bg-white p-4 font-semibold text-slate-800 hover:border-blue-400 hover:text-blue-800" to={location.path}>
-              ხელოსანი {location.locative}
-            </Link>
-          ))}
-        </div>
-        <Link className="mt-6 inline-flex font-bold text-blue-700 hover:text-blue-900" to="/locations">
-          ყველა უბნის ნახვა →
-        </Link>
-      </Section>
-
-      <Section title="რატომ DrWash">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {[
-            ["პირდაპირი კომუნიკაცია", "პრობლემის დეტალებს უშუალოდ მომსახურების დასაგეგმად ვაზუსტებთ."],
-            ["დიაგნოსტიკა პირველ ეტაპზე", "შეკეთების ვარიანტი მიზეზის დადგენის შემდეგ განიხილება."],
-            ["თბილისის უბნები", "ადგილზე ვიზიტი წინასწარი შეთანხმებით იგეგმება."],
-            ["წინასწარი შეთანხმება", "სამუშაოს მოცულობა, ფასი და გარანტიის პირობები დაწყებამდე ზუსტდება."],
-          ].map(([title, text]) => (
-            <article key={title} className="rounded-xl border border-slate-200 p-5">
-              <h3 className="font-bold text-slate-950">{title}</h3>
-              <p className="mt-2 leading-6 text-slate-600">{text}</p>
+      <Section
+        tone="muted"
+        title="სარეცხი მანქანის ძირითადი სერვისები"
+        intro="შეკეთებამდე ვადგენთ მიზეზს, მონტაჟისას კი ვამოწმებთ შეერთებას, გასწორებასა და საცდელ მუშაობას."
+      >
+        <div className="grid gap-5 md:grid-cols-2">
+          {services.map((service, index) => (
+            <article key={service.path} className="group surface-card overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-slate-950 to-blue-700">
+                <img
+                  src={index % 2 === 0 ? siteImages.hero.src : siteImages.process.src}
+                  alt={index % 2 === 0 ? siteImages.hero.alt : siteImages.process.alt}
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
+                <span className="absolute bottom-4 left-4 rounded-full bg-white/95 px-3 py-1.5 text-xs font-black text-blue-700">
+                  0{index + 1}
+                </span>
+              </div>
+              <div className="p-5 sm:p-6">
+                <h3 className="text-xl font-black text-slate-950">
+                  <Link className="hover:text-blue-700" to={service.path}>{service.name}</Link>
+                </h3>
+                <p className="mt-3 line-clamp-3 leading-7 text-slate-600">{service.intro}</p>
+                <Link className="mt-5 inline-flex font-bold text-blue-700 hover:text-blue-900" to={service.path}>
+                  სრულად ნახვა →
+                </Link>
+              </div>
             </article>
           ))}
         </div>
       </Section>
 
-      <Section tone="muted" title="ხშირი კითხვები">
-        <FAQList items={previewFaqs} />
-        <Link className="mt-6 inline-flex font-bold text-blue-700 hover:text-blue-900" to="/faq">
-          ყველა კითხვის ნახვა →
+      <section className="px-4 py-12 sm:px-6 sm:py-16">
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[28px] bg-slate-950 shadow-[0_24px_60px_-35px_rgba(15,23,42,0.8)]">
+          <img src={siteImages.process.src} alt={siteImages.process.alt} width="1536" height="1024" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-40" />
+          <div className="absolute inset-0 bg-slate-950/65" />
+          <div className="relative px-5 py-12 text-center text-white sm:px-10 sm:py-16">
+            <h2 className="text-2xl font-black sm:text-4xl">გჭირდებათ სწრაფი დიაგნოსტიკა?</h2>
+            <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-200">
+              დაგვიკავშირდით, აღწერეთ პრობლემა და შეათანხმეთ ვიზიტის ხელმისაწვდომი დრო.
+            </p>
+            <a className="mt-7 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-white px-6 font-bold text-slate-950 hover:bg-blue-50 sm:w-auto" href={contactLinks.phone}>
+              დარეკვა — {site.phone.display}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Section title="რატომ DrWash">
+        <div className="grid items-stretch gap-6 lg:grid-cols-[1fr_0.9fr]">
+          <div className="grid gap-3">
+            {[
+              ["პირდაპირი კომუნიკაცია", "პრობლემის დეტალებს უშუალოდ მომსახურების დასაგეგმად ვაზუსტებთ."],
+              ["დიაგნოსტიკა პირველ ეტაპზე", "შეკეთების ვარიანტი მიზეზის დადგენის შემდეგ განიხილება."],
+              ["თბილისის უბნები", "ადგილზე ვიზიტი წინასწარი შეთანხმებით იგეგმება."],
+              ["წინასწარი შეთანხმება", "სამუშაოს მოცულობა, ფასი და გარანტიის პირობები დაწყებამდე ზუსტდება."],
+            ].map(([title, text], index) => (
+              <article key={title} className="surface-card flex items-start gap-4 p-5">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-sm font-black text-white">0{index + 1}</span>
+                <div>
+                  <h3 className="font-black text-slate-950">{title}</h3>
+                  <p className="mt-1 leading-6 text-slate-600">{text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <figure className="surface-card overflow-hidden">
+            <img src={siteImages.trust.src} alt={siteImages.trust.alt} width="1536" height="1024" loading="lazy" className="aspect-[4/3] h-full w-full object-cover lg:aspect-auto" />
+          </figure>
+        </div>
+      </Section>
+
+      <Section tone="muted" title="სასარგებლო რესურსები">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {articles.map((article, index) => (
+            <article key={article.path} className="group surface-card overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-blue-600 to-slate-950">
+                <img
+                  src={[siteImages.process.src, siteImages.hero.src, siteImages.trust.src][index % 3]}
+                  alt={[siteImages.process.alt, siteImages.hero.alt, siteImages.trust.alt][index % 3]}
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/15 to-transparent" />
+                <h3 className="absolute inset-x-0 bottom-0 p-4 font-black leading-snug text-white">
+                  <Link to={article.path}>{article.h1}</Link>
+                </h3>
+              </div>
+              <p className="p-4 text-sm leading-6 text-slate-600">{article.excerpt}</p>
+            </article>
+          ))}
+        </div>
+        <Link className="mt-7 inline-flex min-h-11 items-center rounded-full bg-slate-950 px-5 font-bold text-white hover:bg-blue-700" to="/blog">
+          ბლოგის ნახვა →
         </Link>
+      </Section>
+
+      <Section title="სარეცხი მანქანის ბრენდები">
+        <div className="flex flex-wrap gap-2.5">
+          {brands.map((brand) => (
+            <Link key={brand.path} className="rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 shadow-sm hover:border-blue-400 hover:text-blue-700" to={brand.path}>
+              {brand.name}
+            </Link>
+          ))}
+        </div>
+        <Link className="mt-6 inline-flex font-bold text-blue-700 hover:text-blue-900" to="/brands">ბრენდების გვერდი →</Link>
+      </Section>
+
+      <Section tone="muted" title="მომსახურების უბნები თბილისში">
+        <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {locations.map((location) => (
+            <Link key={location.path} className="surface-card p-4 font-bold text-slate-800 hover:border-blue-400 hover:text-blue-700" to={location.path}>
+              ხელოსანი {location.locative}
+            </Link>
+          ))}
+        </div>
+        <Link className="mt-6 inline-flex font-bold text-blue-700 hover:text-blue-900" to="/locations">ყველა უბნის ნახვა →</Link>
+      </Section>
+
+      <Section title="ხშირი კითხვები">
+        <div className="grid gap-8 lg:grid-cols-[1fr_0.45fr]">
+          <FAQList items={previewFaqs} />
+          <aside className="blue-grid rounded-[26px] bg-blue-600 p-6 text-white sm:p-8">
+            <h3 className="text-2xl font-black">დამატებითი კითხვა გაქვთ?</h3>
+            <p className="mt-3 leading-7 text-blue-100">დაგვიკავშირდით ტელეფონით ან WhatsApp-ით და მოგვწერეთ მოწყობილობის ბრენდი და პრობლემა.</p>
+            <Link className="mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-white px-5 font-bold text-blue-700" to="/faq">
+              ყველა კითხვის ნახვა →
+            </Link>
+          </aside>
+        </div>
       </Section>
 
       <CTA />

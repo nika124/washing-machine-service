@@ -6,13 +6,13 @@ export default function Breadcrumbs({ items }) {
   return (
     <>
       <JsonLd data={breadcrumbSchema(items)} />
-      <nav aria-label="Breadcrumb" className="mx-auto max-w-screen-xl px-5 py-4 sm:px-6">
-        <ol className="flex flex-wrap items-center gap-2 text-sm text-slate-600">
+      <nav aria-label="Breadcrumb" className="container-shell py-4">
+        <ol className="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-500 sm:text-sm">
           {items.map((item, index) => {
             const last = index === items.length - 1;
             return (
               <li key={item.path} className="flex items-center gap-2">
-                {index > 0 && <span aria-hidden="true">/</span>}
+                {index > 0 && <span aria-hidden="true" className="text-slate-300">/</span>}
                 {last ? (
                   <span aria-current="page" className="font-medium text-slate-900">
                     {item.label}
