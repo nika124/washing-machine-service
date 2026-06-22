@@ -18,6 +18,7 @@ export function render(url) {
       helmet.title.toString(),
       helmet.meta.toString(),
       helmet.link.toString(),
+      helmet.script.toString(),
     ]
       .filter(Boolean)
       .join("\n    "),
