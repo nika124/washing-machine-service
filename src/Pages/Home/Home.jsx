@@ -1,80 +1,64 @@
-// src/Pages/Home/Home.jsx
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import PhoneIcon from "@mui/icons-material/Phone";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import BuildIcon from "@mui/icons-material/Build";
-import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
-import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
+import SEO from "../../Components/SEO/SEO.jsx";
+import JsonLd from "../../Components/SEO/JsonLd.jsx";
+import { faqSchema, localBusinessSchema } from "../../Components/SEO/schemas.js";
+import { CTA, FAQList, LinkCards, Section } from "../../Components/Common/Content.jsx";
+import { brands } from "../../data/brands.js";
+import { faqs } from "../../data/faqs.js";
+import { locations } from "../../data/locations.js";
+import { problems } from "../../data/problems.js";
+import { services } from "../../data/services.js";
+import { contactLinks, site } from "../../data/site.js";
 
 export default function Home() {
+  const previewFaqs = faqs.slice(0, 4);
+
   return (
     <>
-      <Helmet>
-        <title>სარეცხი მანქანის შეკეთება თბილისში | DrWash</title>
-        <meta
-          name="description"
-          content="სარეცხი მანქანის შეკეთება თბილისში ადგილზე მისვლით. DrWash გთავაზობთ სწრაფ დიაგნოსტიკას, შეკეთებას და გარანტიას."
-        />
-        <meta property="og:title" content="სარეცხი მანქანის შეკეთება თბილისში | DrWash" />
-        <meta
-          property="og:description"
-          content="გამოიძახეთ სარეცხი მანქანის ხელოსანი თბილისში. ადგილზე მისვლა, დიაგნოსტიკა და შეკეთება გარანტიით."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://drwash.ge/" />
-        <meta property="og:site_name" content="DrWash" />
-        <meta property="og:locale" content="ka_GE" />
-        <meta property="og:image" content="https://drwash.ge/og-image.svg" />
-        <meta name="geo.region" content="GE-TB" />
-        <meta name="geo.placename" content="Tbilisi" />
-        <link rel="canonical" href="https://drwash.ge/" />
-      </Helmet>
+      <SEO
+        title="სარეცხი მანქანის შეკეთება თბილისში | ხელოსანი გამოძახებით | DrWash"
+        description="DrWash გთავაზობთ სარეცხი მანქანის შეკეთებას თბილისში გამოძახებით — დიაგნოსტიკა, მონტაჟი, წყლის გაჟონვის, გაწურვისა და ბრუნვის პრობლემების შემოწმება."
+        path="/"
+      />
+      <JsonLd data={localBusinessSchema()} />
+      <JsonLd data={faqSchema(previewFaqs)} />
 
-      {/* Hero */}
-      <section className="bg-blue-50 border-b border-blue-100 py-9 sm:py-12 px-5 sm:px-6">
-        <div className="max-w-screen-xl mx-auto grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-slate-900">
-              სარეცხი მანქანის შეკეთება ადგილზე, თბილისის მასშტაბით
-            </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              სწრაფი დიაგნოსტიკა, ადგილზე შეკეთება და გარანტია სერვისზე.
-              ხელოსნის გამოძახება თბილისში - 20 ლარი.
+      <section className="border-b border-blue-100 bg-blue-50">
+        <div className="mx-auto grid max-w-screen-xl items-center gap-8 px-5 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.15fr_0.85fr]">
+          <div>
+            <p className="mb-2 text-sm font-bold uppercase tracking-wide text-blue-700">
+              DrWash • თბილისი
             </p>
-            <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3">
-              <a
-                href="tel:+995555123456"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-md shadow-blue-900/10 transition hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-900/15 active:translate-y-px active:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-              >
-                <PhoneIcon aria-hidden="true" />
-                დაგვირეკეთ – 555 123 456
+            <h1 className="text-3xl font-extrabold leading-tight text-slate-950 sm:text-4xl lg:text-5xl">
+              სარეცხი მანქანის შეკეთება თბილისში გამოძახებით
+            </h1>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-700">
+              სარეცხი მანქანის დიაგნოსტიკა, შეკეთება და მონტაჟი მომხმარებლის
+              მისამართზე. მოგვწერეთ ბრენდი, პრობლემა და თბილისის უბანი ვიზიტის
+              დასაგეგმად.
+            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a className="inline-flex justify-center rounded-lg bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2" href={contactLinks.phone}>
+                დარეკვა — {site.phone.display}
               </a>
-              <a
-                href="https://wa.me/995555123456"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-300 bg-white/95 px-6 py-3 font-semibold text-blue-700 shadow-md shadow-blue-900/5 transition hover:border-blue-500 hover:bg-blue-50 hover:text-blue-800 hover:shadow-lg hover:shadow-blue-900/10 active:translate-y-px active:bg-blue-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-              >
-                <WhatsAppIcon aria-hidden="true" />
+              <a className="inline-flex justify-center rounded-lg border border-blue-300 bg-white px-5 py-3 font-bold text-blue-800 hover:border-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" href={contactLinks.whatsapp}>
                 WhatsApp
               </a>
-              <Link
-                to="/services"
-                className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white/80 px-5 py-3 font-semibold text-slate-700 shadow-sm transition hover:border-blue-300 hover:bg-white hover:text-blue-700 hover:shadow-md active:translate-y-px active:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-              >
+              <Link className="inline-flex justify-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-bold text-slate-700 hover:border-blue-400 hover:text-blue-800" to="/services">
                 სერვისების ნახვა
               </Link>
             </div>
-            <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-2 text-sm font-medium text-slate-600">
-              <span className="rounded-full bg-white px-3 py-1.5 border border-blue-200 shadow-sm">გარანტია სერვისზე</span>
-              <span className="rounded-full bg-white px-3 py-1.5 border border-blue-200 shadow-sm">ადგილზე მისვლა</span>
-              <span className="rounded-full bg-white px-3 py-1.5 border border-blue-200 shadow-sm">10:00 - 20:00</span>
-            </div>
+            <ul className="mt-7 flex flex-wrap gap-2 text-sm font-semibold text-slate-700">
+              <li className="rounded-full border border-blue-200 bg-white px-3 py-2">ადგილზე მისვლა</li>
+              <li className="rounded-full border border-blue-200 bg-white px-3 py-2">დიაგნოსტიკა</li>
+              <li className="rounded-full border border-blue-200 bg-white px-3 py-2">მონტაჟი</li>
+              <li className="rounded-full border border-blue-200 bg-white px-3 py-2">{site.hours.label}</li>
+            </ul>
           </div>
-
-          <figure className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-blue-200 bg-white/90 p-2 shadow-lg shadow-blue-900/10">
+          <figure className="mx-auto w-full max-w-lg overflow-hidden rounded-2xl border border-blue-200 bg-white p-2 shadow-lg shadow-blue-900/10">
             <img
               src="/images/hero-service-placeholder.png"
-              alt="სარეცხი მანქანის ხელოსანი თბილისში ადგილზე შეკეთების დროს"
+              alt="სარეცხი მანქანის ხელოსანი თბილისში მოწყობილობის შემოწმებისას"
               width="960"
               height="720"
               decoding="async"
@@ -85,77 +69,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="max-w-screen-lg mx-auto px-5 sm:px-6 py-10 sm:py-12">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-800 mb-10">
-          ჩვენი სერვისები
-        </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {/* Leakage */}
-          <div className="p-5 sm:p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition flex flex-col items-start text-left">
-            <BuildIcon className="text-blue-600" style={{ fontSize: 42 }} />
-            <h3 className="mt-4 text-lg sm:text-xl font-semibold text-slate-900">
-              დიაგნოსტიკა
-            </h3>
-            <p className="mt-2 text-slate-600 leading-relaxed">
-              პროფესიონალი ხელოსანი ჩაატარებს დანადგარის სრულ დიაგნოსტიკას,
-              გაუმართაობის მიზეზის დადგენა ხდება მაქსიმალურად მცირე დროში.
-            </p>
-          </div>
+      <Section
+        title="სარეცხი მანქანის ძირითადი სერვისები"
+        intro="შეკეთებამდე ვადგენთ მიზეზს, მონტაჟისას კი ვამოწმებთ შეერთებას, გასწორებასა და საცდელ მუშაობას."
+      >
+        <LinkCards items={services.map((service) => ({
+          path: service.path,
+          title: service.name,
+          text: service.intro,
+        }))} columns="md:grid-cols-2" />
+      </Section>
 
-          {/* Engine */}
-          <div className="p-5 sm:p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition flex flex-col items-start text-left">
-            <ElectricalServicesIcon
-              className="text-blue-600"
-              style={{ fontSize: 42 }}
-            />
-            <h3 className="mt-4 text-lg sm:text-xl font-semibold text-slate-900">
-              შეკეთება
-            </h3>
-            <p className="mt-2 text-slate-600 leading-relaxed">
-              სარეცხი მანქანის შეკეთება ხდება ადგილზე. შესაძლებელია საჭირო
-              გახდეს სარეცხი მანქანის ან ნაწილის სერვისცენტრში გადატანა.
-            </p>
-          </div>
+      <Section tone="muted" title="გავრცელებული პრობლემები">
+        <LinkCards items={problems.map((problem) => ({
+          path: problem.path,
+          title: problem.name,
+          text: problem.description,
+        }))} />
+        <Link className="mt-6 inline-flex font-bold text-blue-700 hover:text-blue-900" to="/problems">
+          ყველა პრობლემის ნახვა →
+        </Link>
+      </Section>
 
-          {/* Installation */}
-          <div className="p-5 sm:p-6 bg-white rounded-lg border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition flex flex-col items-start text-left sm:col-span-2 lg:col-span-1">
-            <HomeRepairServiceIcon
-              className="text-blue-600"
-              style={{ fontSize: 42 }}
-            />
-            <h3 className="mt-4 text-lg sm:text-xl font-semibold text-slate-900">
-              დაზიანების ტიპები
-            </h3>
-            <ul className="mt-2 text-slate-600 space-y-1 list-disc list-inside">
-              <li>ელექტრონული დაფის დაზიანება</li>
-              <li>ბარაბნის და საკისრების შეკეთება</li>
-              <li>ღვედის, ძრავის და სხვა დეტალების შეცვლა</li>
-              <li>წყლის გაჟონვის და დრენაჟის პრობლემები</li>
-            </ul>
-          </div>
+      <Section title="სარეცხი მანქანის ბრენდები">
+        <div className="flex flex-wrap gap-3">
+          {brands.map((brand) => (
+            <Link key={brand.path} className="rounded-full border border-slate-300 px-4 py-2 font-semibold text-slate-700 hover:border-blue-500 hover:text-blue-800" to={brand.path}>
+              {brand.name}
+            </Link>
+          ))}
         </div>
-      </section>
+        <Link className="mt-6 inline-flex font-bold text-blue-700 hover:text-blue-900" to="/brands">
+          ბრენდების გვერდი →
+        </Link>
+      </Section>
 
-      {/* About */}
-      <section className="bg-slate-50 py-10 sm:py-12 text-center px-5 sm:px-6">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-4">
-            რატომ DrWash?
-          </h2>
-          <p className="text-slate-600 leading-relaxed">
-            15 წლიანი გამოცდილება და პროფესიონალთა გუნდი, სერვისზე გარანტია, 
-            ორიგინალი ნაწილები, პროფესიონალი ხელოსანის ადგილზე მისვლა ხდება ოპერატიულად, 
-            სარეცხი მანქანის ხელოსანი გამოძახებით
-          </p>
-          <Link
-            to="/contact"
-            className="mt-6 inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-md shadow-blue-900/10 transition hover:bg-blue-700 hover:shadow-lg active:translate-y-px active:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-          >
-            სარეცხი მანქანის ხელოსნის გამოძახება
-          </Link>
+      <Section tone="muted" title="მომსახურების უბნები თბილისში">
+        <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {locations.map((location) => (
+            <Link key={location.path} className="rounded-lg border border-slate-200 bg-white p-4 font-semibold text-slate-800 hover:border-blue-400 hover:text-blue-800" to={location.path}>
+              ხელოსანი {location.locative}
+            </Link>
+          ))}
         </div>
-      </section>
+        <Link className="mt-6 inline-flex font-bold text-blue-700 hover:text-blue-900" to="/locations">
+          ყველა უბნის ნახვა →
+        </Link>
+      </Section>
+
+      <Section title="რატომ DrWash">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["პირდაპირი კომუნიკაცია", "პრობლემის დეტალებს უშუალოდ მომსახურების დასაგეგმად ვაზუსტებთ."],
+            ["დიაგნოსტიკა პირველ ეტაპზე", "შეკეთების ვარიანტი მიზეზის დადგენის შემდეგ განიხილება."],
+            ["თბილისის უბნები", "ადგილზე ვიზიტი წინასწარი შეთანხმებით იგეგმება."],
+            ["წინასწარი შეთანხმება", "სამუშაოს მოცულობა, ფასი და გარანტიის პირობები დაწყებამდე ზუსტდება."],
+          ].map(([title, text]) => (
+            <article key={title} className="rounded-xl border border-slate-200 p-5">
+              <h3 className="font-bold text-slate-950">{title}</h3>
+              <p className="mt-2 leading-6 text-slate-600">{text}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="muted" title="ხშირი კითხვები">
+        <FAQList items={previewFaqs} />
+        <Link className="mt-6 inline-flex font-bold text-blue-700 hover:text-blue-900" to="/faq">
+          ყველა კითხვის ნახვა →
+        </Link>
+      </Section>
+
+      <CTA />
     </>
   );
 }
