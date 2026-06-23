@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./Components/Common/ScrollToTop.jsx";
 import Header from "./Layout/Header/Header.jsx";
 import Footer from "./Layout/Footer/Footer.jsx";
 import Home from "./Pages/Home/Home.jsx";
@@ -29,6 +30,7 @@ export default function App({ router = BrowserRouter, routerProps = {} }) {
 
   return (
     <RouterComponent {...routerProps}>
+      <ScrollToTop />
       <Header />
       <main id="main-content">
         <Routes>

@@ -39,21 +39,21 @@ export default function BlogArticlePage() {
         { label: article.h1, path: article.path },
       ]} />
       <PageHero eyebrow="პრაქტიკული გზამკვლევი" title={article.h1} intro={article.excerpt} />
-      <div className="mx-auto max-w-3xl px-5 py-10 sm:px-6 sm:py-14">
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
         {article.sections.map((section) => (
-          <section key={section.heading} className="mb-10">
-            <h2 className="text-2xl font-bold text-slate-950">{section.heading}</h2>
+          <section key={section.heading} className="mb-8 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_14px_45px_-30px_rgba(15,23,42,0.3)] sm:p-7">
+            <h2 className="text-2xl font-black tracking-tight text-slate-950">{section.heading}</h2>
             <div className="mt-4 space-y-4 leading-8 text-slate-700">
               {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             </div>
           </section>
         ))}
-        <aside className="rounded-xl border border-blue-200 bg-blue-50 p-5">
-          <h2 className="text-xl font-bold text-slate-950">დაკავშირებული სერვისები</h2>
+        <aside className="blue-grid rounded-[26px] bg-blue-600 p-6 text-white sm:p-8">
+          <h2 className="text-xl font-black">დაკავშირებული სერვისები</h2>
           <ul className="mt-3 space-y-2">
             {article.related.map((path) => (
               <li key={path}>
-                <Link className="font-semibold text-blue-700 hover:text-blue-900" to={path}>
+                <Link className="font-bold text-white hover:text-blue-100" to={path}>
                   {relatedLabels[path] || "დაკავშირებული გვერდი"} →
                 </Link>
               </li>
