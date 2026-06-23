@@ -129,52 +129,55 @@ export default function Home() {
         intro="შეკეთებამდე ვადგენთ მიზეზს, მონტაჟისას კი ვამოწმებთ შეერთებას, გასწორებასა და საცდელ მუშაობას."
       >
         <div className="grid gap-5 md:grid-cols-2">
-          {services.map((service, index) => (
-            <article
-              key={service.path}
-              className="group surface-card overflow-hidden"
-            >
-              <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-slate-950 to-blue-700">
-                <img
-                  src={
-                    index % 2 === 0
-                      ? siteImages.hero.src
-                      : siteImages.process.src
-                  }
-                  alt={
-                    index % 2 === 0
-                      ? siteImages.hero.alt
-                      : siteImages.process.alt
-                  }
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
-                <span className="absolute bottom-4 left-4 rounded-full bg-white/95 px-3 py-1.5 text-xs font-black text-blue-700">
-                  0{index + 1}
-                </span>
-              </div>
-              <div className="p-5 sm:p-6">
-                <p className="text-xl font-black text-slate-950">
-                  <Link className="hover:text-blue-700" to={service.path}>
-                    {service.name}
+          {services.map((service, index) => {
+            const image =
+              siteImages[service.image] ??
+              (index % 2 === 0 ? siteImages.hero : siteImages.process);
+
+            return (
+              <article
+                key={service.path}
+                className="group surface-card overflow-hidden"
+              >
+                <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-slate-950 to-blue-700">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
+
+                  <span className="absolute bottom-4 left-4 rounded-full bg-white/95 px-3 py-1.5 text-xs font-black text-blue-700">
+                    0{index + 1}
+                  </span>
+                </div>
+
+                <div className="p-5 sm:p-6">
+                  <p className="text-xl font-black text-slate-950">
+                    <Link className="hover:text-blue-700" to={service.path}>
+                      {service.name}
+                    </Link>
+                  </p>
+
+                  <p className="mt-3 line-clamp-3 leading-7 text-slate-600">
+                    {service.intro}
+                  </p>
+
+                  <Link
+                    className="mt-5 inline-flex font-bold text-blue-700 hover:text-blue-900"
+                    to={service.path}
+                  >
+                    სრულად ნახვა →
                   </Link>
-                </p>
-                <p className="mt-3 line-clamp-3 leading-7 text-slate-600">
-                  {service.intro}
-                </p>
-                <Link
-                  className="mt-5 inline-flex font-bold text-blue-700 hover:text-blue-900"
-                  to={service.path}
-                >
-                  სრულად ნახვა →
-                </Link>
-              </div>
-            </article>
-          ))}
+                </div>
+              </article>
+            );
+          })}
         </div>
       </Section>
 
@@ -245,8 +248,8 @@ export default function Home() {
           </div>
           <figure className="surface-card overflow-hidden">
             <img
-              src={siteImages.trust.src}
-              alt={siteImages.trust.alt}
+              src={siteImages.visit.src}
+              alt={siteImages.visit.alt}
               width="1536"
               height="1024"
               loading="lazy"
@@ -267,17 +270,19 @@ export default function Home() {
                 <img
                   src={
                     [
-                      siteImages.process.src,
                       siteImages.hero.src,
+                      siteImages.diagnosting.src,
                       siteImages.trust.src,
-                    ][index % 3]
+                      siteImages.cleaning.src,
+                    ][index % 4]
                   }
                   alt={
                     [
-                      siteImages.process.alt,
                       siteImages.hero.alt,
+                      siteImages.diagnosting.alt,
                       siteImages.trust.alt,
-                    ][index % 3]
+                      siteImages.cleaning.alt,
+                    ][index % 4]
                   }
                   width="1536"
                   height="1024"
