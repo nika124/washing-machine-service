@@ -67,4 +67,11 @@ ${seoRoutes
 
 await writeFile(path.join(rootDir, "public", "sitemap.xml"), sitemap, "utf8");
 await writeFile(path.join(distDir, "sitemap.xml"), sitemap, "utf8");
+const robots = `User-agent: *
+Allow: /
+
+Sitemap: ${site.url}/sitemap.xml
+`;
+await writeFile(path.join(rootDir, "public", "robots.txt"), robots, "utf8");
+await writeFile(path.join(distDir, "robots.txt"), robots, "utf8");
 await rm(serverDir, { recursive: true, force: true });

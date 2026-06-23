@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="სარეცხი მანქანის შეკეთება თბილისში | ხელოსანი გამოძახებით | DrWash"
-        description="DrWash გთავაზობთ სარეცხი მანქანის შეკეთებას თბილისში გამოძახებით — დიაგნოსტიკა, მონტაჟი, წყლის გაჟონვის, გაწურვისა და ბრუნვის პრობლემების შემოწმება."
+        title={`სარეცხი მანქანის შეკეთება თბილისში | ${site.name}`}
+        description={`${site.name} გთავაზობთ სარეცხი მანქანის შეკეთებას თბილისში გამოძახებით — დიაგნოსტიკა, მონტაჟი, წყლის გაჟონვის, გაწურვისა და ბრუნვის პრობლემების შემოწმება.`}
         path="/"
       />
       <JsonLd data={localBusinessSchema()} />
@@ -42,19 +42,22 @@ export default function Home() {
           <div className="relative flex min-h-[570px] items-end px-5 py-8 sm:min-h-[600px] sm:items-center sm:px-10 sm:py-12 lg:min-h-[620px] lg:px-14">
             <div className="max-w-2xl text-white">
               <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.2em] text-blue-300">
-              DrWash • თბილისი
+              {site.name} • თბილისი
               </p>
               <h1 className="text-3xl font-black leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
                 სარეცხი მანქანის შეკეთება თბილისში გამოძახებით
               </h1>
               <p className="mt-5 max-w-xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
-                სარეცხი მანქანის დიაგნოსტიკა, შეკეთება და მონტაჟი მომხმარებლის
-                მისამართზე. მოგვწერეთ ბრენდი, პრობლემა და თბილისის უბანი ვიზიტის
-                დასაგეგმად.
+                {site.name} გთავაზობთ სარეცხი მანქანის შეკეთებას თბილისში
+                გამოძახებით. ხელოსანი ადგილზე ამოწმებს დაზიანებას და გეხმარებათ
+                გაჟონვის, არდატრიალების, გაწურვის, ხმაურის, წყლის არშეშვებისა და
+                მონტაჟის პრობლემების მოგვარებაში. მოგვწერეთ მოწყობილობის ბრენდი,
+                აღწერეთ სიმპტომი და მიუთითეთ თბილისის უბანი, რათა ვიზიტის დრო
+                წინასწარ შევათანხმოთ.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <a className="focus-ring inline-flex min-h-12 items-center justify-center rounded-full bg-blue-600 px-6 font-bold text-white shadow-lg shadow-blue-950/30 transition hover:bg-blue-500" href={contactLinks.phone}>
-                  დარეკვა — {site.phone.display}
+                  დარეკვა ხელოსანთან — {site.phone.display}
                 </a>
                 <a className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/40 bg-white/10 px-6 font-bold text-white backdrop-blur transition hover:bg-white hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" href={contactLinks.whatsapp}>
                   WhatsApp
@@ -111,9 +114,9 @@ export default function Home() {
                 </span>
               </div>
               <div className="p-5 sm:p-6">
-                <h3 className="text-xl font-black text-slate-950">
+                <p className="text-xl font-black text-slate-950">
                   <Link className="hover:text-blue-700" to={service.path}>{service.name}</Link>
-                </h3>
+                </p>
                 <p className="mt-3 line-clamp-3 leading-7 text-slate-600">{service.intro}</p>
                 <Link className="mt-5 inline-flex font-bold text-blue-700 hover:text-blue-900" to={service.path}>
                   სრულად ნახვა →
@@ -129,18 +132,18 @@ export default function Home() {
           <img src={siteImages.process.src} alt={siteImages.process.alt} width="1536" height="1024" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-40" />
           <div className="absolute inset-0 bg-slate-950/65" />
           <div className="relative px-5 py-12 text-center text-white sm:px-10 sm:py-16">
-            <h2 className="text-2xl font-black sm:text-4xl">გჭირდებათ სწრაფი დიაგნოსტიკა?</h2>
+            <p className="text-2xl font-black sm:text-4xl">გჭირდებათ სწრაფი დიაგნოსტიკა?</p>
             <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-200">
               დაგვიკავშირდით, აღწერეთ პრობლემა და შეათანხმეთ ვიზიტის ხელმისაწვდომი დრო.
             </p>
             <a className="mt-7 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-white px-6 font-bold text-slate-950 hover:bg-blue-50 sm:w-auto" href={contactLinks.phone}>
-              დარეკვა — {site.phone.display}
+              დიაგნოსტიკის მოთხოვნა — {site.phone.display}
             </a>
           </div>
         </div>
       </section>
 
-      <Section title="რატომ DrWash">
+      <Section title={`რატომ ${site.name}`}>
         <div className="grid items-stretch gap-6 lg:grid-cols-[1fr_0.9fr]">
           <div className="grid gap-3">
             {[
@@ -152,7 +155,7 @@ export default function Home() {
               <article key={title} className="surface-card flex items-start gap-4 p-5">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-sm font-black text-white">0{index + 1}</span>
                 <div>
-                  <h3 className="font-black text-slate-950">{title}</h3>
+                  <p className="font-black text-slate-950">{title}</p>
                   <p className="mt-1 leading-6 text-slate-600">{text}</p>
                 </div>
               </article>
@@ -178,9 +181,9 @@ export default function Home() {
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/15 to-transparent" />
-                <h3 className="absolute inset-x-0 bottom-0 p-4 font-black leading-snug text-white">
+                <p className="absolute inset-x-0 bottom-0 p-4 font-black leading-snug text-white">
                   <Link to={article.path}>{article.h1}</Link>
-                </h3>
+                </p>
               </div>
               <p className="p-4 text-sm leading-6 text-slate-600">{article.excerpt}</p>
             </article>
@@ -217,7 +220,7 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-[1fr_0.45fr]">
           <FAQList items={previewFaqs} />
           <aside className="blue-grid rounded-[26px] bg-blue-600 p-6 text-white sm:p-8">
-            <h3 className="text-2xl font-black">დამატებითი კითხვა გაქვთ?</h3>
+            <p className="text-2xl font-black">დამატებითი კითხვა გაქვთ?</p>
             <p className="mt-3 leading-7 text-blue-100">დაგვიკავშირდით ტელეფონით ან WhatsApp-ით და მოგვწერეთ მოწყობილობის ბრენდი და პრობლემა.</p>
             <Link className="mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-white px-5 font-bold text-blue-700" to="/faq">
               ყველა კითხვის ნახვა →

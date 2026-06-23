@@ -11,13 +11,13 @@ export default function Header() {
       <div className="container-shell flex h-[68px] items-center justify-between gap-3">
         <Link
           to="/"
-          aria-label="DrWash მთავარი გვერდი"
+          aria-label={`${site.name} მთავარი გვერდი`}
           className="focus-ring flex shrink-0 items-center gap-2 rounded-xl text-xl font-black tracking-tight text-slate-950 sm:text-2xl"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-sm text-white shadow-lg shadow-blue-600/25">
             DW
           </span>
-          <span><span className="text-blue-600">Dr</span>Wash</span>
+          <span><span className="text-blue-600">{site.name.slice(0, 2)}</span>{site.name.slice(2)}</span>
         </Link>
 
         <nav aria-label="მთავარი ნავიგაცია" className="hidden items-center gap-0.5 text-[13px] font-bold xl:flex">
@@ -77,7 +77,7 @@ export default function Header() {
               className="mt-2 inline-flex min-h-12 items-center justify-center rounded-xl bg-blue-600 px-4 font-bold text-white sm:col-span-2"
               href={contactLinks.phone}
             >
-              დარეკვა — {site.phone.display}
+              ხელოსნის გამოძახება — {site.phone.display}
             </a>
           </div>
         </nav>

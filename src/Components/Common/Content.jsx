@@ -53,11 +53,11 @@ export function LinkCards({ items, columns = "md:grid-cols-2 lg:grid-cols-3" }) 
               <circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="4" /><path d="M8 4h8" />
             </svg>
           </span>
-          <h3 className="text-lg font-bold text-slate-950">
+          <p className="text-lg font-bold text-slate-950">
             <Link className="focus-ring rounded hover:text-blue-700" to={item.path}>
               {item.title || item.name}
             </Link>
-          </h3>
+          </p>
           {item.text && <p className="mt-3 flex-1 leading-7 text-slate-600">{item.text}</p>}
           <Link className="mt-5 inline-flex items-center font-bold text-blue-700 hover:text-blue-900" to={item.path}>
             სრულად ნახვა <span aria-hidden="true" className="ml-2 transition group-hover:translate-x-1">→</span>
@@ -123,12 +123,12 @@ export function CTA({
       <div className="blue-grid relative mx-auto max-w-6xl overflow-hidden rounded-[28px] bg-blue-700 px-5 py-9 text-white shadow-[0_24px_60px_-30px_rgba(29,78,216,0.75)] sm:px-10 sm:py-12 lg:flex lg:items-center lg:justify-between lg:gap-10">
         <div className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-white/15 blur-3xl" />
         <div className="relative">
-          <h2 className="text-2xl font-black leading-tight sm:text-3xl">{title}</h2>
+          <p className="text-2xl font-black leading-tight sm:text-3xl">{title}</p>
           <p className="mt-3 max-w-2xl leading-7 text-blue-100">{text}</p>
         </div>
         <div className="relative mt-7 flex shrink-0 flex-col gap-3 sm:flex-row lg:mt-0">
           <a className="focus-ring inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 font-bold text-blue-800 hover:bg-blue-50" href={contactLinks.phone}>
-            დარეკვა — {site.phone.display}
+            სარეცხი მანქანის შეკეთების შეკვეთა — {site.phone.display}
           </a>
           <a className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/40 px-6 font-bold text-white hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" href={contactLinks.whatsapp}>
             WhatsApp

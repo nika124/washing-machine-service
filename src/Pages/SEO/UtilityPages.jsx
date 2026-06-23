@@ -135,10 +135,12 @@ export function ContactPage() {
             <span className="text-sm text-blue-700">შეტყობინება</span>
             <strong className="mt-2 block text-xl">WhatsApp</strong>
           </a>
-          <a className="surface-card p-5 text-slate-900 transition hover:-translate-y-1 hover:border-blue-400" href={contactLinks.email}>
-            <span className="text-sm text-slate-500">ელფოსტა</span>
-            <strong className="mt-2 block break-all">{site.email.value}</strong>
-          </a>
+          {site.email.value && (
+            <a className="surface-card p-5 text-slate-900 transition hover:-translate-y-1 hover:border-blue-400" href={contactLinks.email}>
+              <span className="text-sm text-slate-500">ელფოსტა</span>
+              <strong className="mt-2 block break-all">{site.email.value}</strong>
+            </a>
+          )}
           <div className="surface-card p-5">
             <span className="text-sm text-slate-500">სამუშაო საათები</span>
             <strong className="mt-2 block">{site.hours.label}</strong>

@@ -40,6 +40,11 @@ export function localBusinessSchema() {
 
   if (!site.phone.isPlaceholder) schema.telephone = site.phone.international;
   if (!site.email.isPlaceholder) schema.email = site.email.value;
+  const profiles = [
+    ...Object.values(site.socialLinks),
+    site.googleBusinessProfileUrl,
+  ].filter(Boolean);
+  if (profiles.length) schema.sameAs = profiles;
 
   return schema;
 }
