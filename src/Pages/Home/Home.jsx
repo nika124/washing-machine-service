@@ -56,6 +56,14 @@ export default function Home() {
               <h1 className="text-3xl font-black leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
                 სარეცხი მანქანის შეკეთება თბილისში გამოძახებით
               </h1>
+              <div className="mt-7 flex flex-col gap-3 sm:hidden">
+                <a
+                  className="focus-ring inline-flex min-h-12 items-center justify-center rounded-full bg-blue-600 px-6 font-bold text-white shadow-lg shadow-blue-950/30 transition hover:bg-blue-500"
+                  href={contactLinks.phone}
+                >
+                  {site.phone.display}
+                </a>
+              </div>
               <p className="mt-5 max-w-xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
                 {site.name} გთავაზობთ სარეცხი მანქანის შეკეთებას თბილისში
                 გამოძახებით. ხელოსანი ადგილზე ამოწმებს დაზიანებას და გეხმარებათ
@@ -66,7 +74,7 @@ export default function Home() {
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <a
-                  className="focus-ring inline-flex min-h-12 items-center justify-center rounded-full bg-blue-600 px-6 font-bold text-white shadow-lg shadow-blue-950/30 transition hover:bg-blue-500"
+                  className="focus-ring hidden min-h-12 items-center justify-center rounded-full bg-blue-600 px-6 font-bold text-white shadow-lg shadow-blue-950/30 transition hover:bg-blue-500 sm:inline-flex"
                   href={contactLinks.phone}
                 >
                   {site.phone.display}
