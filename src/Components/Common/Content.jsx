@@ -103,7 +103,9 @@ export function FAQList({ items }) {
         <details key={item.question} className="group surface-card p-5 open:border-blue-200 sm:p-6">
           <summary className="flex min-h-7 cursor-pointer list-none items-start justify-between gap-4 font-bold text-slate-950 marker:content-none">
             <span>{item.question}</span>
-            <span aria-hidden="true" className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-lg text-slate-700 transition group-open:rotate-45 group-open:bg-blue-600 group-open:text-white">+</span>
+            <span aria-hidden="true" className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-lg text-slate-700 transition group-open:rotate-45 group-open:bg-blue-600 group-open:text-white">
+              <span className="text-symbol-icon">+</span>
+            </span>
           </summary>
           <p className="mt-3 leading-7 text-slate-600">{item.answer}</p>
         </details>
