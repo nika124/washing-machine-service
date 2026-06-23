@@ -51,7 +51,7 @@ export default function Header() {
             aria-expanded={open}
             aria-controls="site-navigation"
           >
-            <span aria-hidden="true" className="text-symbol-icon mobile-menu-symbol-icon text-2xl">{open ? "×" : "≡"}</span>
+            <span aria-hidden="true" className="text-2xl leading-none">{open ? "×" : "≡"}</span>
           </button>
         </div>
       </div>
