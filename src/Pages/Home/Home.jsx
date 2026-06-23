@@ -40,8 +40,9 @@ export default function Home() {
             alt={siteImages.hero.alt}
             width="1448"
             height="1086"
+            loading="eager"
             decoding="async"
-            fetchpriority="high"
+            fetchPriority="high"
             className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/10" />
@@ -148,6 +149,7 @@ export default function Home() {
                   width="1536"
                   height="1024"
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
@@ -184,6 +186,7 @@ export default function Home() {
             width="1536"
             height="1024"
             loading="lazy"
+            decoding="async"
             className="absolute inset-0 h-full w-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-slate-950/65" />
@@ -279,6 +282,7 @@ export default function Home() {
                   width="1536"
                   height="1024"
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/15 to-transparent" />
