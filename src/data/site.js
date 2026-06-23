@@ -1,6 +1,13 @@
+const fallbackSiteUrl = "https://washing-machine-service.vercel.app/";
+const environmentSiteUrl =
+  import.meta.env?.VITE_SITE_URL ||
+  (typeof process !== "undefined" ? process.env.VITE_SITE_URL : undefined);
+const siteUrl = new URL(environmentSiteUrl || fallbackSiteUrl).toString().replace(/\/$/, "");
+
 export const site = {
   name: "DrWash",
-  url: "https://drwash.ge",
+  url: siteUrl,
+  canonicalUrl: siteUrl,
   locale: "ka_GE",
   language: "ka",
   region: "GE-TB",
@@ -13,8 +20,7 @@ export const site = {
     isPlaceholder: true,
   },
   email: {
-    // TODO: confirm or replace before launch.
-    value: "info@drwash.ge",
+    value: "",
     isPlaceholder: true,
   },
   whatsapp: {
@@ -22,6 +28,13 @@ export const site = {
     url: "https://wa.me/995555123456",
     isPlaceholder: true,
   },
+  socialLinks: {
+    facebook: "",
+    instagram: "",
+    youtube: "",
+    tiktok: "",
+  },
+  googleBusinessProfileUrl: "",
   hours: {
     label: "ორშაბათი – კვირა | 10:00 – 22:00",
     days: [
@@ -46,11 +59,15 @@ export const site = {
 };
 
 export function absoluteUrl(path = "/") {
-  return new URL(path, `${site.url}/`).toString();
+  return new URL(path, `${site.canonicalUrl}/`).toString();
 }
 
 export const contactLinks = {
   phone: `tel:${site.phone.international}`,
-  email: `mailto:${site.email.value}`,
+  email: site.email.value ? `mailto:${site.email.value}` : "",
   whatsapp: site.whatsapp.url,
 };
+
+export const activeSocialLinks = Object.entries(site.socialLinks)
+  .filter(([, url]) => Boolean(url))
+  .map(([platform, url]) => ({ platform, url }));

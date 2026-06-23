@@ -46,6 +46,15 @@
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2;
   }
 
+  .text-symbol-icon {
+    @apply inline-flex h-[1em] w-[1em] items-center justify-center leading-none;
+    transform: translateY(-1px);
+  }
+
+  .mobile-menu-symbol-icon {
+    transform: translateY(-2px);
+  }
+
   .blue-grid {
     background-image:
       linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),

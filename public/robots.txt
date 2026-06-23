@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://drwash.ge/sitemap.xml
+Sitemap: https://washing-machine-service.vercel.app/sitemap.xml
