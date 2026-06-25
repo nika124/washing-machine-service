@@ -101,7 +101,7 @@ export const locations = locationDetails.map((location) => ({
   ...location,
   path: `/locations/${location.slug}`,
   h1: `სარეცხი მანქანის ხელოსანი ${location.locative}`,
-  title: `სარეცხი მანქანის ხელოსანი ${location.locative} | DrWash`,
+  title: `სარეცხი მანქანის ხელოსანი ${location.locative} | Sarecxo`,
   description: `${location.locative} სარეცხი მანქანის ხელოსანი გამოძახებით — დიაგნოსტიკა, შეკეთება, მონტაჟი და პრობლემის ადგილზე შემოწმება.`,
   intro: `${location.locative} შეგიძლიათ შეუკვეთოთ სარეცხი მანქანის დიაგნოსტიკა, შეკეთება და მონტაჟი. ვიზიტამდე ვაზუსტებთ ბრენდს, სიმპტომს და მისამართს, რათა მომსახურება სწორად დაიგეგმოს.`,
   situations: [

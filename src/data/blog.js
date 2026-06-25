@@ -2,7 +2,7 @@ export const articles = [
   {
     slug: "why-washing-machine-does-not-drain",
     path: "/blog/why-washing-machine-does-not-drain",
-    title: "რატომ არ წურავს სარეცხი მანქანა? | DrWash ბლოგი",
+    title: "რატომ არ წურავს სარეცხი მანქანა? | Sarecxo ბლოგი",
     description:
       "გაიგეთ, რა იწვევს სარეცხი მანქანის გაუწურაობას, რისი უსაფრთხოდ შემოწმება შეგიძლიათ და როდის არის საჭირო ხელოსანი.",
     h1: "რატომ არ წურავს სარეცხი მანქანა?",
@@ -40,7 +40,7 @@ export const articles = [
   {
     slug: "washing-machine-installation-checklist",
     path: "/blog/washing-machine-installation-checklist",
-    title: "სარეცხი მანქანის მონტაჟის ჩამონათვალი | DrWash ბლოგი",
+    title: "სარეცხი მანქანის მონტაჟის ჩამონათვალი | Sarecxo ბლოგი",
     description:
       "რა უნდა შემოწმდეს სარეცხი მანქანის მონტაჟამდე: ადგილი, წყალი, დრენაჟი, ელექტრო კვება, გასწორება და საცდელი ციკლი.",
     h1: "სარეცხი მანქანის მონტაჟის პრაქტიკული ჩამონათვალი",
@@ -78,7 +78,7 @@ export const articles = [
   {
     slug: "washing-machine-leaking-causes",
     path: "/blog/washing-machine-leaking-causes",
-    title: "რატომ ჟონავს წყალი სარეცხი მანქანიდან? | DrWash",
+    title: "რატომ ჟონავს წყალი სარეცხი მანქანიდან? | Sarecxo",
     description:
       "სარეცხი მანქანის გაჟონვის გავრცელებული მიზეზები: მილები, კარის მანჟეტი, ფილტრი, დოზატორი და შიდა შეერთებები.",
     h1: "რატომ ჟონავს წყალი სარეცხი მანქანიდან?",
@@ -116,7 +116,7 @@ export const articles = [
   {
     slug: "how-to-clean-washing-machine-filter",
     path: "/blog/how-to-clean-washing-machine-filter",
-    title: "როგორ გავწმინდოთ სარეცხი მანქანის ფილტრი? | DrWash",
+    title: "როგორ გავწმინდოთ სარეცხი მანქანის ფილტრი? | Sarecxo",
     description:
       "სარეცხი მანქანის სადრენაჟო ფილტრის უსაფრთხო გაწმენდის ნაბიჯები და ნიშნები, როცა მხოლოდ გაწმენდა საკმარისი აღარ არის.",
     h1: "როგორ გავწმინდოთ სარეცხი მანქანის ფილტრი?",

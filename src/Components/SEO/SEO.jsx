@@ -12,21 +12,21 @@ export default function SEO({
   published,
   updated,
 }) {
-  const brandedTitle = title.replaceAll("DrWash", site.name);
-  const brandedDescription = description.replaceAll("DrWash", site.name);
+  const seoTitle = title;
+  const seoDescription = description;
   const canonical = absoluteUrl(path);
   const imageUrl = absoluteUrl(image);
 
   return (
     <Helmet>
       <html lang={site.language} />
-      <title>{brandedTitle}</title>
-      <meta name="description" content={brandedDescription} />
+      <title>{seoTitle}</title>
+      <meta name="description" content={seoDescription} />
       <meta name="robots" content={robots} />
       <link rel="canonical" href={canonical} />
 
-      <meta property="og:title" content={brandedTitle} />
-      <meta property="og:description" content={brandedDescription} />
+      <meta property="og:title" content={seoTitle} />
+      <meta property="og:description" content={seoDescription} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content={site.name} />
@@ -35,8 +35,8 @@ export default function SEO({
       <meta property="og:image:alt" content={`${site.name} — სარეცხი მანქანის სერვისი თბილისში`} />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={brandedTitle} />
-      <meta name="twitter:description" content={brandedDescription} />
+      <meta name="twitter:title" content={seoTitle} />
+      <meta name="twitter:description" content={seoDescription} />
       <meta name="twitter:image" content={imageUrl} />
 
       {geo && <meta name="geo.region" content={site.region} />}

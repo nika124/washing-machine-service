@@ -1,11 +1,7 @@
-const fallbackSiteUrl = "https://washing-machine-service.vercel.app/";
-const environmentSiteUrl =
-  import.meta.env?.VITE_SITE_URL ||
-  (typeof process !== "undefined" ? process.env.VITE_SITE_URL : undefined);
-const siteUrl = new URL(environmentSiteUrl || fallbackSiteUrl).toString().replace(/\/$/, "");
+const siteUrl = "https://sarecxo.ge";
 
 export const site = {
-  name: "DrWash",
+  name: "Sarecxo",
   url: siteUrl,
   canonicalUrl: siteUrl,
   locale: "ka_GE",

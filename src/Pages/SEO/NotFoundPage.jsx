@@ -6,7 +6,7 @@ export default function NotFoundPage() {
   return (
     <>
       <SEO
-        title="გვერდი ვერ მოიძებნა | DrWash"
+        title="გვერდი ვერ მოიძებნა | Sarecxo"
         description="მოთხოვნილი გვერდი ვერ მოიძებნა."
         path="/404"
         robots="noindex,follow"

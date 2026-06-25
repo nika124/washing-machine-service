@@ -35,7 +35,8 @@ export default function Footer() {
       <div className="container-shell grid gap-9 py-12 sm:grid-cols-2 sm:py-16 lg:grid-cols-5">
         <div className="sm:col-span-2 lg:col-span-1">
           <Link to="/" className="text-2xl font-black text-slate-950">
-            <span className="text-blue-600">{site.name.slice(0, 2)}</span>{site.name.slice(2)}
+            {site.name.slice(0, -1)}
+            <span className="text-blue-600">{site.name.slice(-1)}</span>
           </Link>
           <p className="mt-4 text-sm leading-6 text-slate-600">
             სარეცხი მანქანის შეკეთება, დიაგნოსტიკა და მონტაჟი თბილისში ადგილზე ვიზიტით.
