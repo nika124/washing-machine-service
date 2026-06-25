@@ -43,7 +43,7 @@ export default function Footer() {
           </p>
           <address className="mt-4 space-y-2 not-italic text-sm">
             <a className="block font-semibold text-slate-900 hover:text-blue-700" href={contactLinks.phone}>{site.phone.display}</a>
-            <a className="block hover:text-blue-700" href={contactLinks.whatsapp}>WhatsApp</a>
+            <a className="block hover:text-blue-700" href={contactLinks.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
             {site.email.value && (
               <a className="block break-all hover:text-blue-700" href={contactLinks.email}>{site.email.value}</a>
             )}

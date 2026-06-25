@@ -200,6 +200,8 @@ export function CTA({
           <a
             className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/40 px-6 font-bold text-white hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             href={contactLinks.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             WhatsApp
           </a>

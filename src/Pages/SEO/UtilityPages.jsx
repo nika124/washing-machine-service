@@ -131,7 +131,7 @@ export function ContactPage() {
             <span className="text-sm text-blue-100">ტელეფონი</span>
             <strong className="mt-2 block text-xl">{site.phone.display}</strong>
           </a>
-          <a className="surface-card p-5 text-blue-900 transition hover:-translate-y-1 hover:border-blue-400" href={contactLinks.whatsapp}>
+          <a className="surface-card p-5 text-blue-900 transition hover:-translate-y-1 hover:border-blue-400" href={contactLinks.whatsapp} target="_blank" rel="noopener noreferrer">
             <span className="text-sm text-blue-700">შეტყობინება</span>
             <strong className="mt-2 block text-xl">WhatsApp</strong>
           </a>

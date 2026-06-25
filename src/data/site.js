@@ -10,19 +10,17 @@ export const site = {
   city: "თბილისი",
   ogImage: "/og-image.svg",
   phone: {
-    // TODO: replace this repository placeholder with the real business number.
-    display: "555 123 456",
-    international: "+995555123456",
-    isPlaceholder: true,
+    display: "579 674 040",
+    international: "+995579674040",
+    isPlaceholder: false,
   },
   email: {
     value: "",
     isPlaceholder: true,
   },
   whatsapp: {
-    // Derived from the repository placeholder phone number.
-    url: "https://wa.me/995555123456",
-    isPlaceholder: true,
+    url: "https://wa.me/995579674040",
+    isPlaceholder: false,
   },
   socialLinks: {
     facebook: "",
